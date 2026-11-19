@@ -1,0 +1,6 @@
+# Local OS files
+.DS_Store
+Thumbs.db
+
+# Helper scripts
+*.bat
