@@ -1,6 +1,6 @@
 /* ==========================================================================
    PORTFOLIO DESIGN SYSTEM & BESPOKE STYLING
-   Philosophy: Restraint, High-contrast Editorial Typography, Tactile Physics
+   Theme: Deep Navy, Electric Blue & Sky Cyan Modern Glassmorphism
    ========================================================================== */
 
 /* Custom Smooth Scrollbar */
@@ -10,16 +10,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #080b14;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #1c2336;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #2563eb;
 }
 
 /* Typography Enhancements */
@@ -30,11 +30,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Spotlight Card Dynamic Mouse Hover Glow */
+/* Spotlight Card Dynamic Mouse Hover Glow (Electric Blue / Sky Cyan) */
 .spotlight-card {
   position: relative;
-  background-color: rgba(24, 24, 27, 0.4);
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+  background-color: rgba(13, 17, 31, 0.7);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .spotlight-card::before {
@@ -43,9 +43,10 @@ body {
   inset: -1px;
   border-radius: inherit;
   background: radial-gradient(
-    650px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(56, 189, 248, 0.12),
-    transparent 40%
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(56, 189, 248, 0.16),
+    rgba(37, 99, 235, 0.1),
+    transparent 50%
   );
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -75,7 +76,15 @@ body {
 }
 
 .animate-slide-left {
-  animation: slideInRight 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Active Nav Link Styling */
+.nav-item.active {
+  background: linear-gradient(to right, #2563eb, #0ea5e9) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6) !important;
 }
 
 /* Focus Ring Customization */
@@ -86,5 +95,5 @@ body {
 
 /* Tactile Button Feedback */
 button:active, a:active {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }

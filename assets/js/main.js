@@ -1,13 +1,11 @@
 /**
  * ============================================================================
- * PORTFOLIO CLIENT ENGINE — NAZNEEN NAHAR NUPUR (Senior SQA Engineer)
+ * PORTFOLIO CLIENT ENGINE — NAZNEEN NAHAR NUPUR
  * Features:
- * - Analog Canvas Film Grain (Zero-dependency, battery efficient)
- * - Dynamic Mouse Spotlight Lighting for Project Cards
- * - Web Audio Haptic Synthesizer (Zero external audio files)
- * - Live UTC+6 Dhaka Wall Clock
- * - Full Command Palette (Ctrl+K / ⌘K) with Keyboard Navigation
- * - Deep SQA Case Study Sliding Drawer
+ * - Floating Capsule Nav ScrollSpy (Auto-active pill highlighting)
+ * - Dynamic Mouse Spotlight Lighting
+ * - Web Audio Haptic Synthesizer
+ * - SQA Case Study Sliding Drawer
  * - Clipboard Engine with Toast Notifications
  * ============================================================================
  */
@@ -19,37 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     1. SUBTLE ANALOG FILM GRAIN (Generated to Canvas)
-     -------------------------------------------------------------------------- */
-  const canvas = document.getElementById('grain-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
-    function generateNoise() {
-      const imgData = ctx.createImageData(width, height);
-      const buffer = new Uint32Array(imgData.data.buffer);
-      const len = buffer.length;
-      for (let i = 0; i < len; i++) {
-        if (Math.random() < 0.12) {
-          buffer[i] = 0x15ffffff; // Low-alpha white speck
-        }
-      }
-      ctx.putImageData(imgData, 0, 0);
-    }
-
-    generateNoise();
-
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-      generateNoise();
-    });
-  }
-
-  /* --------------------------------------------------------------------------
-     2. DYNAMIC SPOTLIGHT HOVER EFFECT
+     1. DYNAMIC SPOTLIGHT HOVER EFFECT
      -------------------------------------------------------------------------- */
   const cards = document.querySelectorAll('.spotlight-card');
   cards.forEach((card) => {
@@ -63,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     3. SYNTHETIC HAPTIC AUDIO (Web Audio API)
+     2. SYNTHETIC HAPTIC AUDIO (Web Audio API)
      -------------------------------------------------------------------------- */
   let audioEnabled = false;
   let audioCtx = null;
@@ -99,12 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function toggleAudio() {
     audioEnabled = !audioEnabled;
     if (audioEnabled) {
-      soundToggleBtn.classList.add('border-emerald-500/60', 'text-emerald-400');
+      soundToggleBtn.classList.add('bg-blue-600', 'text-white');
       soundToggleBtn.classList.remove('text-zinc-400');
       showToast('Tactile audio feedback: ON');
       playHapticClick(1400);
     } else {
-      soundToggleBtn.classList.remove('border-emerald-500/60', 'text-emerald-400');
+      soundToggleBtn.classList.remove('bg-blue-600', 'text-white');
       soundToggleBtn.classList.add('text-zinc-400');
       showToast('Tactile audio feedback: OFF');
     }
@@ -121,27 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     4. LIVE DHAKA WALL CLOCK (UTC+6)
-     -------------------------------------------------------------------------- */
-  const liveTimeEl = document.getElementById('live-time');
-  function updateDhakaTime() {
-    if (!liveTimeEl) return;
-    const now = new Date();
-    const options = {
-      timeZone: 'Asia/Dhaka',
-      hour12: true,
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-    };
-    const timeString = new Intl.DateTimeFormat('en-US', options).format(now);
-    liveTimeEl.textContent = `Dhaka UTC+6 • ${timeString}`;
-  }
-  updateDhakaTime();
-  setInterval(updateDhakaTime, 1000);
-
-  /* --------------------------------------------------------------------------
-     5. TOAST NOTIFICATION ENGINE
+     3. TOAST NOTIFICATION ENGINE
      -------------------------------------------------------------------------- */
   const toast = document.getElementById('toast');
   const toastMessage = document.getElementById('toast-message');
@@ -161,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     6. CLIPBOARD HANDLER (Email copy)
+     4. CLIPBOARD HANDLER (Email copy)
      -------------------------------------------------------------------------- */
   const EMAIL = 'nazneen.sqa@gmail.com';
 
@@ -172,156 +120,67 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const copyEmailBtn = document.getElementById('copy-email-btn');
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener('click', copyEmail);
-  }
-
   const copyFooterEmailBtn = document.getElementById('copy-footer-email-btn');
   if (copyFooterEmailBtn) {
     copyFooterEmailBtn.addEventListener('click', copyEmail);
   }
 
   /* --------------------------------------------------------------------------
-     7. COMMAND PALETTE (Ctrl + K / ⌘K)
+     5. FLOATING CAPSULE SCROLLSPY (Auto updates active pill as user scrolls)
      -------------------------------------------------------------------------- */
-  const cmdModal = document.getElementById('cmd-modal');
-  const cmdTrigger = document.getElementById('cmd-k-trigger');
-  const cmdInput = document.getElementById('cmd-input');
-  const cmdList = document.getElementById('cmd-list');
+  const sections = document.querySelectorAll('section[id]');
+  const navItems = document.querySelectorAll('.nav-item');
 
-  function openCmdModal() {
-    if (!cmdModal) return;
-    cmdModal.classList.remove('hidden');
-    cmdModal.classList.add('flex');
-    if (cmdInput) {
-      cmdInput.value = '';
-      cmdInput.focus();
-    }
-    filterCmdItems('');
-  }
+  function updateActiveNav() {
+    const scrollY = window.pageYOffset;
+    sections.forEach((section) => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 120;
+      const sectionId = section.getAttribute('id');
 
-  function closeCmdModal() {
-    if (!cmdModal) return;
-    cmdModal.classList.remove('flex');
-    cmdModal.classList.add('hidden');
-  }
-
-  if (cmdTrigger) {
-    cmdTrigger.addEventListener('click', openCmdModal);
-  }
-
-  // Keyboard shortcut: Ctrl+K or Cmd+K
-  window.addEventListener('keydown', (e) => {
-    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
-      e.preventDefault();
-      if (cmdModal && cmdModal.classList.contains('flex')) {
-        closeCmdModal();
-      } else {
-        openCmdModal();
-      }
-    } else if (e.key === 'Escape') {
-      closeCmdModal();
-      closeCaseStudyDrawer();
-    }
-  });
-
-  // Close when clicking outside dialog
-  if (cmdModal) {
-    cmdModal.addEventListener('click', (e) => {
-      if (e.target === cmdModal) closeCmdModal();
-    });
-  }
-
-  // Filter commands
-  function filterCmdItems(query) {
-    const items = cmdList ? cmdList.querySelectorAll('.cmd-item') : [];
-    items.forEach((item) => {
-      const text = item.textContent.toLowerCase();
-      if (!query || text.includes(query.toLowerCase())) {
-        item.style.display = 'flex';
-      } else {
-        item.style.display = 'none';
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        navItems.forEach((item) => {
+          if (item.getAttribute('href') === `#${sectionId}`) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
       }
     });
   }
-
-  if (cmdInput) {
-    cmdInput.addEventListener('input', (e) => {
-      filterCmdItems(e.target.value);
-    });
-  }
-
-  // Action dispatcher
-  if (cmdList) {
-    cmdList.addEventListener('click', (e) => {
-      const button = e.target.closest('.cmd-item');
-      if (!button) return;
-      const action = button.dataset.action;
-      const target = button.dataset.target;
-
-      closeCmdModal();
-
-      if (action === 'goto' && target) {
-        const el = document.querySelector(target);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      } else if (action === 'copy-email') {
-        copyEmail();
-      } else if (action === 'toggle-sound') {
-        toggleAudio();
-      }
-    });
-  }
+  window.addEventListener('scroll', updateActiveNav);
 
   /* --------------------------------------------------------------------------
-     8. DETAILED SQA CASE STUDY DRAWER SYSTEM
+     6. SQA CASE STUDY DRAWER SYSTEM
      -------------------------------------------------------------------------- */
   const caseStudyData = {
     omnitest: {
       tag: 'E2E Web Automation • Playwright & TypeScript',
       title: 'OmniTest: Headless E2E Regression Architecture & CI Matrix',
-      meta: 'Author: Nazneen Nahar Nupur • 850+ Scenarios • 0.2% Flakiness',
+      meta: 'Author: Nazneen Nahar Nupur • 850+ Scenarios • <0.2% Flakiness',
       content: `
         <div class="space-y-6 text-sm text-zinc-300 leading-relaxed font-sans">
-          
           <div class="space-y-2">
-            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400">01 / The Quality Challenge</h4>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-sky-400">01 / The Quality Challenge</h4>
             <p>
               The development team had accumulated an unwieldy legacy Cypress test suite that took over 42 minutes to run per Pull Request. Developers frequently bypassed tests due to frequent false-positive timeouts caused by asynchronous micro-frontend hydration.
             </p>
           </div>
-
           <div class="space-y-2">
-            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400">02 / Automation Strategy & Architecture</h4>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-sky-400">02 / Automation Strategy & Architecture</h4>
             <p>
               Engineered a unified Playwright framework with TypeScript leveraging parallel worker processes inside ephemeral Docker containers. Replaced hard-coded sleeps with web-first assertions and request interception to inject pre-authenticated auth cookies.
             </p>
-            <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 font-mono text-xs text-zinc-400 space-y-1">
-              <div class="text-zinc-500">// Pipeline Execution Graph</div>
-              <div class="text-emerald-400">[GitHub PR Event] ➔ Spin up 4x Sharded Docker Workers</div>
-              <div class="text-sky-400">      ↓</div>
-              <div class="text-zinc-200">Session Injection (Bypasses UI login steps) ➔ Execute 850 Tests</div>
-              <div class="text-sky-400">      ↓</div>
-              <div class="text-emerald-400">Artifact Generation: Traces, Screenshots, Allure Dashboard</div>
-            </div>
           </div>
-
           <div class="space-y-2">
-            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400">03 / The Hardest Flakiness Bug Solved</h4>
-            <p>
-              Intermittent WebSocket token expiration during 200+ step checkout flows caused random test halts. Solved by injecting a global Playwright fixture that intercepts token refresh HTTP calls and dynamically updates the browser context storage state without halting test execution.
-            </p>
-          </div>
-
-          <div class="space-y-2">
-            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400">04 / Quantifiable Production Impact</h4>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-sky-400">03 / Quantifiable Production Impact</h4>
             <ul class="list-disc list-inside space-y-1.5 text-zinc-400 font-mono text-xs">
-              <li>PR regression pipeline runtime reduced from <span class="text-zinc-200 font-semibold">42 minutes to 7 minutes</span>.</li>
+              <li>PR regression pipeline runtime reduced from <span class="text-white font-semibold">42 minutes to 7 minutes</span>.</li>
               <li>Test flakiness dropped from 14.8% down to <span class="text-emerald-400 font-semibold">&lt; 0.2%</span>.</li>
               <li>Zero critical regression escapes logged to production across 18 consecutive releases.</li>
             </ul>
           </div>
-
         </div>
       `,
     },
@@ -331,30 +190,20 @@ document.addEventListener('DOMContentLoaded', () => {
       meta: 'Author: Nazneen Nahar Nupur • 15,000 Virtual Users Simulation',
       content: `
         <div class="space-y-6 text-sm text-zinc-300 leading-relaxed font-sans">
-          
           <div class="space-y-2">
             <h4 class="text-xs font-mono uppercase tracking-wider text-sky-400">01 / The Problem Context</h4>
             <p>
-              Ahead of an annual major promotional campaign, the engineering org required certainty that the checkout and coupon redemption APIs could withstand 12,000 requests per second without cascading database lockouts or elevated 5xx error spikes.
+              Ahead of a high-volume promotional campaign, the engineering team required certainty that checkout and payment APIs could withstand 12,000 requests per second without database deadlocks.
             </p>
           </div>
-
           <div class="space-y-2">
-            <h4 class="text-xs font-mono uppercase tracking-wider text-sky-400">02 / Test Design & Load Distribution</h4>
-            <p>
-              Constructed a parameterized Apache JMeter distributed test cluster with ramp-up, steady-state, and spike phases simulating 15,000 virtual users across global edge gateways. Automated pre-flight smoke checks using Newman in CI to ensure contract validity before load trigger.
-            </p>
-          </div>
-
-          <div class="space-y-2">
-            <h4 class="text-xs font-mono uppercase tracking-wider text-sky-400">03 / Bottlenecks Uncovered</h4>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-sky-400">02 / Bottlenecks Uncovered</h4>
             <ul class="list-disc list-inside space-y-1.5 text-zinc-400 font-mono text-xs">
-              <li>Identified a missing index on the <code>transactions.user_id</code> column causing table locks at 6,500 RPS.</li>
-              <li>Discovered a memory leak in the JWT verification cache under intense concurrent token revocation.</li>
-              <li>Enabled database engineers to optimize connection pooling, slashing p99 latency by 72%.</li>
+              <li>Identified missing database indexes causing table locks under 6,500 RPS.</li>
+              <li>Discovered memory leaks in token verification caches under concurrent revocation bursts.</li>
+              <li>Enabled backend engineers to optimize connection pooling, slashing p99 latency by 72%.</li>
             </ul>
           </div>
-
         </div>
       `,
     },
@@ -364,30 +213,20 @@ document.addEventListener('DOMContentLoaded', () => {
       meta: 'Author: Nazneen Nahar Nupur • 14 Currencies • 42 Edge Bugs Found',
       content: `
         <div class="space-y-6 text-sm text-zinc-300 leading-relaxed font-sans">
-          
           <div class="space-y-2">
-            <h4 class="text-xs font-mono uppercase tracking-wider text-amber-400">01 / The Testing Challenge</h4>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-purple-400">01 / The Testing Challenge</h4>
             <p>
-              Financial transactions require exact mathematical precision with zero room for rounding errors or currency conversion discrepancies. Manual verification of settlement ledgers was slow, error-prone, and failed to test boundary condition edge cases.
+              Financial transactions require exact mathematical precision with zero room for rounding errors or currency conversion discrepancies. Manual verification was slow and prone to missed boundary conditions.
             </p>
           </div>
-
           <div class="space-y-2">
-            <h4 class="text-xs font-mono uppercase tracking-wider text-amber-400">02 / Automated Reconciliation Architecture</h4>
-            <p>
-              Built a custom Python/PyTest validation suite connected directly to staging databases. Formulated property-based test cases simulating boundary transactions (floating point arithmetic, leap-second timestamps, negative balance handling, and simultaneous multi-currency conversions).
-            </p>
-          </div>
-
-          <div class="space-y-2">
-            <h4 class="text-xs font-mono uppercase tracking-wider text-amber-400">03 / Results & Verification</h4>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-purple-400">02 / Results & Verification</h4>
             <ul class="list-disc list-inside space-y-1.5 text-zinc-400 font-mono text-xs">
               <li>Uncovered 42 subtle rounding errors in foreign exchange calculation microservices before release.</li>
-              <li>100% automated regression coverage for core ledger logic.</li>
-              <li>Saved an estimated 40+ engineering hours per bi-weekly financial settlement cycle.</li>
+              <li>Achieved 100% automated regression coverage for core ledger logic.</li>
+              <li>Saved 40+ engineering hours per settlement sprint.</li>
             </ul>
           </div>
-
         </div>
       `,
     },
@@ -406,8 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (drawerContent) {
       drawerContent.innerHTML = `
         <div class="space-y-2 pb-4 border-b border-zinc-800">
-          <div class="font-mono text-xs text-zinc-500">${data.meta}</div>
-          <h2 class="text-2xl font-bold text-zinc-100">${data.title}</h2>
+          <div class="font-mono text-xs text-zinc-400">${data.meta}</div>
+          <h2 class="text-2xl font-bold text-white">${data.title}</h2>
         </div>
         ${data.content}
       `;
@@ -426,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.querySelectorAll('.open-case-study-btn').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
       const caseKey = btn.dataset.case;
       if (caseKey) openCaseStudy(caseKey);
     });
