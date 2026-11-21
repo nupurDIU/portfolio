@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --------------------------------------------------------------------------
      4. CLIPBOARD HANDLER (Email copy)
      -------------------------------------------------------------------------- */
-  const EMAIL = 'nazneen.sqa@gmail.com';
+  const EMAIL = 'nupur23105101072@diu.edu.bd';
 
   function copyEmail() {
     navigator.clipboard.writeText(EMAIL).then(() => {

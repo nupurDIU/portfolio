@@ -23,6 +23,8 @@
 ---
 
 ## 📬 Contact
-- **Email:** nazneen.sqa@gmail.com
+- **Email:** nupur23105101072@diu.edu.bd
+- **Phone:** 01405114666
+- **LinkedIn:** [Nazneen Nahar Nupur](https://bit.ly/3TplxHd)
 - **GitHub:** [@nupurDIU](https://github.com/nupurDIU)
 - **Live URL:** [https://nupurdiu.github.io/portfolio/](https://nupurdiu.github.io/portfolio/)
