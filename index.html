@@ -482,103 +482,218 @@
           <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mt-1">Skills & Toolset</h2>
         </div>
         <p class="text-xs text-zinc-400 max-w-sm">
-          Core competencies across manual testing, test automation frameworks, and CI/CD pipelines.
+          Core competencies across programming, web development, software QA, developer tools, and professional skills.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 font-mono text-xs">
         
-        <!-- Skill 1: Manual Testing -->
-        <div class="p-6 rounded-2xl border border-zinc-800/90 bg-[#0d111f]/60 space-y-4 hover:border-blue-500/40 transition-colors">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-              <i data-lucide="search" class="w-4 h-4"></i>
+        <!-- Skill 1: Programming -->
+        <div class="spotlight-card rounded-2xl border border-zinc-800/90 bg-[#0d111f]/75 p-6 space-y-4 hover:border-blue-500/40 hover:shadow-[0_0_25px_rgba(59,130,246,0.15)] transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                <i data-lucide="terminal" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold tracking-wider text-[11px] uppercase font-mono">Languages</span>
+                <h3 class="text-base font-bold text-white">Programming</h3>
+              </div>
             </div>
-            <span class="text-blue-400 font-semibold tracking-wider text-[11px] uppercase">Manual & Functional</span>
+            <ul class="space-y-2 text-zinc-300 font-sans text-xs pt-1">
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">C & C++</span>
+                <span class="text-blue-400 font-mono text-[10px] px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20">Data Structures</span>
+              </li>
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">Java</span>
+                <span class="text-sky-400 font-mono text-[10px] px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/20">OOP Core</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="font-medium text-zinc-200">Python</span>
+                <span class="text-indigo-400 font-mono text-[10px] px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">Scripting</span>
+              </li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-zinc-300 font-sans text-xs">
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Smoke & Sanity Testing</span><span class="text-sky-400 font-mono text-[10px]">Expert</span></li>
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Boundary Value Analysis</span><span class="text-zinc-400 font-mono text-[10px]">Method</span></li>
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Equivalence Partitioning</span><span class="text-zinc-400 font-mono text-[10px]">Method</span></li>
-            <li class="flex items-center justify-between"><span>Exploratory Testing</span><span class="text-emerald-400 font-mono text-[10px]">Adversarial</span></li>
-          </ul>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-800/60 font-mono text-[11px]">
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">C</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">C++</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Java</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Python</span>
+          </div>
         </div>
 
-        <!-- Skill 2: Automation -->
-        <div class="p-6 rounded-2xl border border-zinc-800/90 bg-[#0d111f]/60 space-y-4 hover:border-sky-500/40 transition-colors">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
-              <i data-lucide="play" class="w-4 h-4"></i>
+        <!-- Skill 2: Web Development -->
+        <div class="spotlight-card rounded-2xl border border-zinc-800/90 bg-[#0d111f]/75 p-6 space-y-4 hover:border-sky-500/40 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)] transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 shrink-0">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-sky-400 font-semibold tracking-wider text-[11px] uppercase font-mono">Frontend & UI</span>
+                <h3 class="text-base font-bold text-white">Web Development</h3>
+              </div>
             </div>
-            <span class="text-sky-400 font-semibold tracking-wider text-[11px] uppercase">Test Automation</span>
+            <ul class="space-y-2 text-zinc-300 font-sans text-xs pt-1">
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">HTML5 & CSS3</span>
+                <span class="text-sky-400 font-mono text-[10px] px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/20">Responsive UI</span>
+              </li>
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">JavaScript</span>
+                <span class="text-blue-400 font-mono text-[10px] px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20">ES6+ DOM</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="font-medium text-zinc-200">AJAX & AJAX UI</span>
+                <span class="text-emerald-400 font-mono text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">Async Data</span>
+              </li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-zinc-300 font-sans text-xs">
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Playwright (TS/JS)</span><span class="text-sky-400 font-mono text-[10px]">Primary</span></li>
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Selenium WebDriver</span><span class="text-zinc-400 font-mono text-[10px]">Cross-Browser</span></li>
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Cypress</span><span class="text-zinc-400 font-mono text-[10px]">E2E/UI</span></li>
-            <li class="flex items-center justify-between"><span>PyTest (Python)</span><span class="text-zinc-400 font-mono text-[10px]">Backend</span></li>
-          </ul>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-800/60 font-mono text-[11px]">
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">HTML5</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">CSS3</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">AJAX</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">AJAX UI</span>
+          </div>
         </div>
 
-        <!-- Skill 3: API & Performance -->
-        <div class="p-6 rounded-2xl border border-zinc-800/90 bg-[#0d111f]/60 space-y-4 hover:border-purple-500/40 transition-colors">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-              <i data-lucide="activity" class="w-4 h-4"></i>
+        <!-- Skill 3: Software QA -->
+        <div class="spotlight-card rounded-2xl border border-zinc-800/90 bg-[#0d111f]/75 p-6 space-y-4 hover:border-emerald-500/40 hover:shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold tracking-wider text-[11px] uppercase font-mono">Quality Assurance</span>
+                <h3 class="text-base font-bold text-white">Software QA</h3>
+              </div>
             </div>
-            <span class="text-purple-400 font-semibold tracking-wider text-[11px] uppercase">API & Performance</span>
+            <ul class="space-y-2 text-zinc-300 font-sans text-xs pt-1">
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">Manual Testing</span>
+                <span class="text-emerald-400 font-mono text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">Functional</span>
+              </li>
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">Test Case Design</span>
+                <span class="text-sky-400 font-mono text-[10px] px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/20">STLC / Scenarios</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="font-medium text-zinc-200">Bug Reporting</span>
+                <span class="text-blue-400 font-mono text-[10px] px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20">Defect Tracking</span>
+              </li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-zinc-300 font-sans text-xs">
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Postman & Newman</span><span class="text-purple-400 font-mono text-[10px]">Automated CI</span></li>
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Apache JMeter</span><span class="text-purple-400 font-mono text-[10px]">15k+ VUs</span></li>
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>REST Assured</span><span class="text-zinc-400 font-mono text-[10px]">API Testing</span></li>
-            <li class="flex items-center justify-between"><span>Swagger / OpenAPI</span><span class="text-zinc-400 font-mono text-[10px]">Contracts</span></li>
-          </ul>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-800/60 font-mono text-[11px]">
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Manual Testing</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Test Case Design</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Bug Reporting</span>
+          </div>
         </div>
 
-        <!-- Skill 4: SQL & Database -->
-        <div class="p-6 rounded-2xl border border-zinc-800/90 bg-[#0d111f]/60 space-y-4 hover:border-blue-500/40 transition-colors">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-              <i data-lucide="database" class="w-4 h-4"></i>
+        <!-- Skill 4: Development Tools -->
+        <div class="spotlight-card rounded-2xl border border-zinc-800/90 bg-[#0d111f]/75 p-6 space-y-4 hover:border-purple-500/40 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 shrink-0">
+                <i data-lucide="wrench" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-purple-400 font-semibold tracking-wider text-[11px] uppercase font-mono">Tools & Platforms</span>
+                <h3 class="text-base font-bold text-white">Development Tools</h3>
+              </div>
             </div>
-            <span class="text-blue-400 font-semibold tracking-wider text-[11px] uppercase">SQL & Data Audits</span>
+            <ul class="space-y-2 text-zinc-300 font-sans text-xs pt-1">
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">VS Code</span>
+                <span class="text-purple-400 font-mono text-[10px] px-2 py-0.5 rounded bg-purple-500/10 border border-purple-500/20">Primary IDE</span>
+              </li>
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">Git & GitHub</span>
+                <span class="text-sky-400 font-mono text-[10px] px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/20">Version Control</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="font-medium text-zinc-200">Antigravity</span>
+                <span class="text-indigo-400 font-mono text-[10px] px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">AI Workflow</span>
+              </li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-zinc-300 font-sans text-xs">
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>PostgreSQL & MySQL</span><span class="text-blue-400 font-mono text-[10px]">Complex Joins</span></li>
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Data Reconciliation</span><span class="text-zinc-400 font-mono text-[10px]">Integrity</span></li>
-            <li class="flex items-center justify-between"><span>Redis Cache Checks</span><span class="text-zinc-400 font-mono text-[10px]">In-Memory</span></li>
-          </ul>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-800/60 font-mono text-[11px]">
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">VS Code</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Git</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">GitHub</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Antigravity</span>
+          </div>
         </div>
 
-        <!-- Skill 5: CI/CD & DevOps -->
-        <div class="p-6 rounded-2xl border border-zinc-800/90 bg-[#0d111f]/60 space-y-4 hover:border-sky-500/40 transition-colors">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
-              <i data-lucide="git-branch" class="w-4 h-4"></i>
+        <!-- Skill 5: Professional Skills -->
+        <div class="spotlight-card rounded-2xl border border-zinc-800/90 bg-[#0d111f]/75 p-6 space-y-4 hover:border-indigo-500/40 hover:shadow-[0_0_25px_rgba(99,102,241,0.15)] transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
+                <i data-lucide="users" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-indigo-400 font-semibold tracking-wider text-[11px] uppercase font-mono">Competencies</span>
+                <h3 class="text-base font-bold text-white">Professional Skills</h3>
+              </div>
             </div>
-            <span class="text-sky-400 font-semibold tracking-wider text-[11px] uppercase">CI/CD & DevOps</span>
+            <ul class="space-y-2 text-zinc-300 font-sans text-xs pt-1">
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">Problem Solving</span>
+                <span class="text-indigo-400 font-mono text-[10px] px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">Analytical</span>
+              </li>
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">Communication</span>
+                <span class="text-sky-400 font-mono text-[10px] px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/20">Effective</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="font-medium text-zinc-200">Teamwork</span>
+                <span class="text-blue-400 font-mono text-[10px] px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20">Collaboration</span>
+              </li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-zinc-300 font-sans text-xs">
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>GitHub Actions</span><span class="text-sky-400 font-mono text-[10px]">Automation</span></li>
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Docker</span><span class="text-zinc-400 font-mono text-[10px]">Test Containers</span></li>
-            <li class="flex items-center justify-between"><span>Git / GitHub CLI</span><span class="text-zinc-400 font-mono text-[10px]">Control</span></li>
-          </ul>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-800/60 font-mono text-[11px]">
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Problem Solving</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Communication</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Teamwork</span>
+          </div>
         </div>
 
-        <!-- Skill 6: Management & Tracking -->
-        <div class="p-6 rounded-2xl border border-zinc-800/90 bg-[#0d111f]/60 space-y-4 hover:border-emerald-500/40 transition-colors">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-              <i data-lucide="check-square" class="w-4 h-4"></i>
+        <!-- Skill 6: Office & Languages -->
+        <div class="spotlight-card rounded-2xl border border-zinc-800/90 bg-[#0d111f]/75 p-6 space-y-4 hover:border-teal-500/40 hover:shadow-[0_0_25px_rgba(20,184,166,0.15)] transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 shrink-0">
+                <i data-lucide="languages" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-teal-400 font-semibold tracking-wider text-[11px] uppercase font-mono">Productivity & Comms</span>
+                <h3 class="text-base font-bold text-white">Office & Languages</h3>
+              </div>
             </div>
-            <span class="text-emerald-400 font-semibold tracking-wider text-[11px] uppercase">Management & Ops</span>
+            <ul class="space-y-2 text-zinc-300 font-sans text-xs pt-1">
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">MS Office</span>
+                <span class="text-teal-400 font-mono text-[10px] px-2 py-0.5 rounded bg-teal-500/10 border border-teal-500/20">Word, Excel, PPT</span>
+              </li>
+              <li class="flex items-center justify-between pb-1.5 border-b border-zinc-800/60">
+                <span class="font-medium text-zinc-200">Bangla</span>
+                <span class="text-emerald-400 font-mono text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">Native</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="font-medium text-zinc-200">English</span>
+                <span class="text-sky-400 font-mono text-[10px] px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/20">Professional</span>
+              </li>
+            </ul>
           </div>
-          <ul class="space-y-2 text-zinc-300 font-sans text-xs">
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Jira / Xray / TestRail</span><span class="text-emerald-400 font-mono text-[10px]">Agile QA</span></li>
-            <li class="flex items-center justify-between pb-1 border-b border-zinc-800/60"><span>Allure Reporting</span><span class="text-zinc-400 font-mono text-[10px]">Visuals</span></li>
-            <li class="flex items-center justify-between"><span>Confluence Test SOP</span><span class="text-zinc-400 font-mono text-[10px]">Strategy</span></li>
-          </ul>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-800/60 font-mono text-[11px]">
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">MS Office</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">Bangla</span>
+            <span class="px-2.5 py-1 rounded-full bg-zinc-800/70 border border-zinc-700/60 text-zinc-200">English</span>
+          </div>
         </div>
 
       </div>
