@@ -355,6 +355,46 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
 
+          <!-- VISUAL TEST EVIDENCE & EXECUTION SCREENSHOTS -->
+          <div class="space-y-3 pt-3 border-t border-zinc-800/80">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-sky-400 flex items-center justify-between">
+              <span>Visual Test Evidence & Execution Artifacts</span>
+              <span class="px-2 py-0.5 rounded bg-sky-500/15 border border-sky-500/30 text-[10px] text-sky-300">Assignment Screenshots</span>
+            </h4>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              High-resolution defect and test execution evidence captures extracted directly from the SQA verification suite:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+              <a href="assets/images/projects/skybound-main.png" target="_blank" class="block group/img rounded-xl overflow-hidden border border-zinc-800 hover:border-sky-500/60 transition-all bg-zinc-950 shadow-md">
+                <div class="aspect-video overflow-hidden">
+                  <img src="assets/images/projects/skybound-main.png" alt="Test Execution Evidence 1" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-2.5 bg-zinc-900/90 flex items-center justify-between text-[11px] font-mono text-zinc-300">
+                  <span>Evidence 1: Defect Capture</span>
+                  <span class="text-sky-400 group-hover/img:underline">Zoom ↗</span>
+                </div>
+              </a>
+              <a href="assets/images/projects/skybound-evidence-2.png" target="_blank" class="block group/img rounded-xl overflow-hidden border border-zinc-800 hover:border-blue-500/60 transition-all bg-zinc-950 shadow-md">
+                <div class="aspect-video overflow-hidden">
+                  <img src="assets/images/projects/skybound-evidence-2.png" alt="Test Execution Evidence 2" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-2.5 bg-zinc-900/90 flex items-center justify-between text-[11px] font-mono text-zinc-300">
+                  <span>Evidence 2: Verification Run</span>
+                  <span class="text-blue-400 group-hover/img:underline">Zoom ↗</span>
+                </div>
+              </a>
+              <a href="assets/images/projects/skybound-evidence-3.png" target="_blank" class="block group/img rounded-xl overflow-hidden border border-zinc-800 hover:border-emerald-500/60 transition-all bg-zinc-950 shadow-md">
+                <div class="aspect-video overflow-hidden">
+                  <img src="assets/images/projects/skybound-evidence-3.png" alt="Test Execution Evidence 3" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-2.5 bg-zinc-900/90 flex items-center justify-between text-[11px] font-mono text-zinc-300">
+                  <span>Evidence 3: Boundary & Triage</span>
+                  <span class="text-emerald-400 group-hover/img:underline">Zoom ↗</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
         </div>
       `,
     },
