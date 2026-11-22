@@ -329,45 +329,74 @@
 
         </div>
 
-        <!-- RIGHT COLUMN: SQA & Engineering Methodology (Ordered List) (6 cols) -->
-        <div class="lg:col-span-6 spotlight-card rounded-3xl border border-blue-500/25 bg-[#0d111f]/95 p-6 sm:p-7 space-y-4 shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+        <!-- RIGHT COLUMN: Projects Tested & What I Can Do in SQA (<ol> & <ul>) (6 cols) -->
+        <div class="lg:col-span-6 spotlight-card rounded-3xl border border-blue-500/25 bg-[#0d111f]/95 p-6 sm:p-7 space-y-5 shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+          
+          <!-- Header Tag -->
           <div class="flex items-center justify-between pb-3 border-b border-zinc-800/80">
             <div class="flex items-center gap-2 text-sky-400 font-semibold text-xs font-mono uppercase tracking-wider">
-              <i data-lucide="list-ordered" class="w-4 h-4"></i>
-              <span>Engineering Methodology</span>
+              <i data-lucide="folder-check" class="w-4 h-4 text-sky-400"></i>
+              <span>Projects & SQA Expertise</span>
             </div>
-            <span class="px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 font-mono text-[10px] font-semibold">5-Stage STLC</span>
-          </div>
-          
-          <div>
-            <h3 class="text-lg sm:text-xl font-bold text-white">Software QA Lifecycle Process</h3>
-            <p class="text-xs text-zinc-400 mt-1 leading-relaxed">
-              Disciplined, sequential engineering approach to software testing and defect minimization:
-            </p>
+            <span class="px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 font-mono text-[10px] font-semibold">Practical Experience</span>
           </div>
 
-          <ol class="space-y-2.5 font-mono text-xs text-zinc-300 counter-reset-item list-decimal list-inside leading-relaxed font-sans">
-            <li class="p-2.5 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-blue-500/30 transition-all">
-              <strong class="text-white font-sans text-xs">1. Requirement Analysis (RTM):</strong>
-              <span class="text-zinc-400 block text-[11px] mt-0.5">Deconstruct formal SRS into atomic conditions & build bidirectional RTM.</span>
-            </li>
-            <li class="p-2.5 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-sky-500/30 transition-all">
-              <strong class="text-white font-sans text-xs">2. Test Scenario & Case Design:</strong>
-              <span class="text-zinc-400 block text-[11px] mt-0.5">Engineer Positive, Negative, & Boundary Value Analysis (BVA) suites.</span>
-            </li>
-            <li class="p-2.5 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-indigo-500/30 transition-all">
-              <strong class="text-white font-sans text-xs">3. Test Execution & Verification:</strong>
-              <span class="text-zinc-400 block text-[11px] mt-0.5">Execute functional runs & sweeps to isolate anomalies and edge cases.</span>
-            </li>
-            <li class="p-2.5 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-emerald-500/30 transition-all">
-              <strong class="text-white font-sans text-xs">4. Defect Logging & Jira Triage:</strong>
-              <span class="text-zinc-400 block text-[11px] mt-0.5">Log structured bug reports with reproduction steps & severity matrices.</span>
-            </li>
-            <li class="p-2.5 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-purple-500/30 transition-all">
-              <strong class="text-white font-sans text-xs">5. Regression & Quality Sign-Off:</strong>
-              <span class="text-zinc-400 block text-[11px] mt-0.5">Re-verify fixes, run full regression sweeps, and certify release readiness.</span>
-            </li>
-          </ol>
+          <!-- Section 1: Major Projects Tested & Developed (ORDERED LIST <ol>) -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+              <h4 class="text-xs font-mono uppercase tracking-wider text-sky-300 font-bold">Featured Projects & Deliverables (<ol>)</h4>
+            </div>
+            <ol class="space-y-2.5 font-mono text-xs text-zinc-300 list-decimal list-inside font-sans leading-relaxed">
+              <li class="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all">
+                <strong class="text-white font-sans text-xs sm:text-sm">SkyBound Airways — Aviation Booking SQA Suite:</strong>
+                <span class="text-zinc-400 block text-xs mt-1 leading-normal font-sans">
+                  Conducted end-to-end SQA for an airline ticket reservation system. Designed 100% Requirements Traceability Matrix (RTM) across 10 SRS requirements, created positive/negative & Boundary Value Analysis (BVA) test suites, and documented critical defect reports (BUG-001/BUG-002) in Jira.
+                </span>
+              </li>
+              <li class="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80 hover:border-indigo-500/40 hover:bg-indigo-500/5 transition-all">
+                <strong class="text-white font-sans text-xs sm:text-sm">Lexical Analyzer & Syntax Checker — Java Compiler GUI:</strong>
+                <span class="text-zinc-400 block text-xs mt-1 leading-normal font-sans">
+                  Developed an interactive desktop compiler front-end with Java Swing. Features 6-category regex tokenization (Keywords, Identifiers, Operators, Literals, Separators, Comments), automated syntax correction suggestions, line numbering, and tokenized report exports.
+                </span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Section 2: What I Can Do in SQA (UNORDERED LIST <ul>) -->
+          <div class="space-y-3 pt-3 border-t border-zinc-800/80">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-300 font-bold">What I Can Do in Software QA (<ul>)</h4>
+            </div>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-300 font-sans">
+              <li class="flex items-center gap-2 p-2 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-emerald-500/30 transition-all">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                <span class="text-[11px] sm:text-xs">Manual & Exploratory Web Testing</span>
+              </li>
+              <li class="flex items-center gap-2 p-2 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-emerald-500/30 transition-all">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                <span class="text-[11px] sm:text-xs">Test Scenario & Test Case Design</span>
+              </li>
+              <li class="flex items-center gap-2 p-2 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-emerald-500/30 transition-all">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                <span class="text-[11px] sm:text-xs">Boundary Value Analysis (BVA) & EP</span>
+              </li>
+              <li class="flex items-center gap-2 p-2 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-emerald-500/30 transition-all">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                <span class="text-[11px] sm:text-xs">Requirements Traceability Matrix (RTM)</span>
+              </li>
+              <li class="flex items-center gap-2 p-2 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-emerald-500/30 transition-all">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                <span class="text-[11px] sm:text-xs">Jira Bug Lifecycle & Severity Triage</span>
+              </li>
+              <li class="flex items-center gap-2 p-2 rounded-xl bg-zinc-950/50 border border-zinc-800/70 hover:border-emerald-500/30 transition-all">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                <span class="text-[11px] sm:text-xs">REST API Validation using Postman</span>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
       </div>

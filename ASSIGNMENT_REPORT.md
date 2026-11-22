@@ -69,7 +69,7 @@ The website uses a **fully linked multi-page architecture** connected by a persi
 +-----------------------------------------------------------------------------------+
 |  SECTION: About & Professional Philosophy (Side-by-Side 2-Column Grid)            |
 |  - Left Column: Bio & 4 Core Background Badges (CSE Undergrad, Dhaka, QA, Learn)  |
-|  - Right Column: 5-Stage SQA Lifecycle Workflow (<ol> Ordered List)              |
+|  - Right Column: Projects Tested (<ol>) & What I Can Do in SQA (<ul>)              |
 +-----------------------------------------------------------------------------------+
 |  SECTION: Technical Skills & Toolset (6 Categorized Domain Cards)                  |
 |  - Programming | Web Dev | Software QA | Tools | Professional | Office & Languages |
@@ -172,28 +172,34 @@ The website uses a **fully linked multi-page architecture** connected by a persi
 
 ---
 
-#### Code Snippet 2: SQA Lifecycle Ordered List (`<ol>`)
+#### Code Snippet 2: Featured Projects & SQA Capabilities Lists (`<ol>` & `<ul>`)
 ```html
-<ol class="list-decimal list-inside space-y-3 font-mono text-xs sm:text-sm text-zinc-300 marker:text-sky-400 marker:font-bold">
-  <li class="pl-2 leading-relaxed">
-    <strong class="text-white font-sans text-sm">Requirement Analysis & Traceability (RTM):</strong> Deconstruct formal software requirements (SRS) into atomic testable conditions.
+<!-- Ordered List (<ol>): Featured Projects Tested & Developed -->
+<ol class="space-y-2.5 font-mono text-xs text-zinc-300 list-decimal list-inside font-sans leading-relaxed">
+  <li class="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80">
+    <strong class="text-white font-sans text-xs sm:text-sm">SkyBound Airways — Aviation Booking SQA Suite:</strong>
+    <span class="text-zinc-400 block text-xs mt-1">Conducted end-to-end SQA for an airline ticket reservation system with 100% RTM across 10 SRS requirements, positive/negative & BVA test suites, and Jira defect triage (BUG-001/BUG-002).</span>
   </li>
-  <li class="pl-2 leading-relaxed">
-    <strong class="text-white font-sans text-sm">Test Scenario & Test Case Design:</strong> Engineer comprehensive Positive, Negative, and Boundary Value Analysis (BVA) suites.
-  </li>
-  <li class="pl-2 leading-relaxed">
-    <strong class="text-white font-sans text-sm">Test Execution & Anomaly Detection:</strong> Execute manual validation runs and automated regression sweeps.
-  </li>
-  <li class="pl-2 leading-relaxed">
-    <strong class="text-white font-sans text-sm">Defect Logging & Jira Triage Management:</strong> Document structured bug reports with step-by-step reproduction flows.
-  </li>
-  <li class="pl-2 leading-relaxed">
-    <strong class="text-white font-sans text-sm">Re-Testing, Regression & Quality Sign-Off:</strong> Systematically re-verify resolved fixes and certify release readiness.
+  <li class="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80">
+    <strong class="text-white font-sans text-xs sm:text-sm">Lexical Analyzer & Syntax Checker — Java Compiler GUI:</strong>
+    <span class="text-zinc-400 block text-xs mt-1">Developed an interactive desktop compiler front-end with Java Swing featuring 6-category regex tokenization, syntax correction suggestions, line numbering, and tokenized report exports.</span>
   </li>
 </ol>
+
+<!-- Unordered List (<ul>): What I Can Do in Software QA -->
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-300 font-sans">
+  <li class="flex items-center gap-2 p-2 rounded-xl bg-zinc-950/50 border border-zinc-800/70">
+    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+    <span>Manual & Exploratory Web Testing</span>
+  </li>
+  <li class="flex items-center gap-2 p-2 rounded-xl bg-zinc-950/50 border border-zinc-800/70">
+    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+    <span>Boundary Value Analysis (BVA) & EP</span>
+  </li>
+</ul>
 ```
-- **What it does:** Formats a sequential 5-stage software quality assurance process where numbers strictly matter.
-- **Why it was used:** Semantic HTML requires `<ol>` for ordered, chronological processes. Custom Tailwind marker styling (`marker:text-sky-400 marker:font-bold`) ensures visual alignment with the design system.
+- **What it does:** Uses `<ol>` to enumerate major software engineering projects in rank order of deliverables, and `<ul>` with Lucide check icons to highlight verified SQA capabilities (exploratory testing, test case design, BVA/EP, RTM matrix, Jira bug tracking, and Postman API validation).
+- **Why it was used:** Semantic HTML standard requires `<ol>` when order and sequencing of deliverables matters, and `<ul>` when enumerating equivalent technical capabilities. Combining both inside the About Me section strictly satisfies Part-B requirement: *"Use headings, paragraphs, ordered and unordered lists, images, and both internal and external hyperlinks"*, providing verifiable academic and professional proof of competence.
 
 ---
 
