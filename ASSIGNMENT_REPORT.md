@@ -67,9 +67,9 @@ The website uses a **fully linked multi-page architecture** connected by a persi
 |  CTA BUTTONS: [View Case Studies ->]  [Download CV]  [Get in Touch]               |
 |                                                                                   |
 +-----------------------------------------------------------------------------------+
-|  SECTION: About & Professional Philosophy                                         |
-|  - Bio Paragraphs & Core Testing Mindset                                          |
-|  - Step-by-Step QA Lifecycle Process (<ol> Ordered List)                          |
+|  SECTION: About & Professional Philosophy (Side-by-Side 2-Column Grid)            |
+|  - Left Column: Bio & 4 Core Background Badges (CSE Undergrad, Dhaka, QA, Learn)  |
+|  - Right Column: 5-Stage SQA Lifecycle Workflow (<ol> Ordered List)              |
 +-----------------------------------------------------------------------------------+
 |  SECTION: Technical Skills & Toolset (6 Categorized Domain Cards)                  |
 |  - Programming | Web Dev | Software QA | Tools | Professional | Office & Languages |
