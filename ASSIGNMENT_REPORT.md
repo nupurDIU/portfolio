@@ -73,6 +73,7 @@ The website uses a **fully linked multi-page architecture** connected by a persi
 +-----------------------------------------------------------------------------------+
 |  SECTION: Technical Skills & Toolset (Grid Cards)                                 |
 |  - Programming | Web Dev | Software QA | Tools | Professional | Languages         |
+|  - [Technical Skills & Competency Matrix Table (<table> with Levels & Tools)]     |
 +-----------------------------------------------------------------------------------+
 |  SECTION: Featured Engineering & QA Projects                                      |
 |  +-----------------------------------------------------------------------------+  |
@@ -83,9 +84,10 @@ The website uses a **fully linked multi-page architecture** connected by a persi
 |  | - 6-Category Tokenizer, Syntax Suggestions    | [Thumbnails & Full Screen]  |  |
 |  +-----------------------------------------------------------------------------+  |
 +-----------------------------------------------------------------------------------+
-|  SECTION: Academic Qualifications & Credentials                                   |
-|  - DIU BSc in CSE Card | HSC Card | SSC Card                                      |
-|  - [Academic Qualifications Table (<table> with CGPA & Passing Years)]            |
+|  SECTION: Academic Qualifications & Credentials (Clean 3-Card Architecture)       |
+|  - DIU BSc in CSE Card (CGPA 3.63, Software Development)                          |
+|  - HSC Card (Govt. Ashek Mahmud College, GPA 4.73)                                |
+|  - SSC Card (J. J. K. M. Girls High School & College, GPA 4.89)                   |
 +-----------------------------------------------------------------------------------+
 |  SECTION: Interactive Contact Form                                                |
 |  - Direct Contact Cards (Email, Phone, LinkedIn, Location)                        |
@@ -135,39 +137,37 @@ The website uses a **fully linked multi-page architecture** connected by a persi
 | **Images (`<img>`)** | All Pages | High-resolution project screenshots (`skybound-main.png`, `lexical-analyzer-main.png`), thumbnails, and profile portrait. |
 | **Internal Links (`<a>`)** | All Pages | Inter-page navigation (`index.html`, `about.html`, `projects.html`, `contact.html`) and on-page section anchors (`#skills`, `#education`). |
 | **External Links (`<a>`)** | All Pages | `target="_blank"` links to GitHub profile (`github.com/nupurDIU`), LinkedIn, and image view tabs. |
-| **Tables (`<table>`)** | All Pages | Academic Qualifications Table (DIU, HSC, SSC), Project Comparison Table, and Availability SLA Matrix. |
+| **Tables (`<table>`)** | All Pages | Technical Skills & Competency Matrix Table (`index.html`), Academic Qualifications Table (`about.html`), Project Comparison Matrix Table (`projects.html`), and Availability SLA Matrix (`contact.html`). |
 
 ---
 
 ### 3. Explanation of Three Code Snippets
 
-#### Code Snippet 1: Responsive Academic Credentials Table (`<table>`)
+#### Code Snippet 1: Technical Skills & Tools Competency Table (`<table>`)
 ```html
 <div class="overflow-x-auto rounded-2xl border border-blue-500/25 bg-[#0d111f]/90 p-6 shadow-xl space-y-4">
   <table class="w-full text-left font-mono text-xs border-collapse">
     <thead>
       <tr class="border-b border-zinc-800 text-sky-400 text-[11px] uppercase tracking-wider bg-zinc-950/60">
-        <th class="py-3 px-3.5">Degree / Examination</th>
-        <th class="py-3 px-3.5">Institution / University</th>
-        <th class="py-3 px-3.5">Major / Group</th>
-        <th class="py-3 px-3.5">Passing Year</th>
-        <th class="py-3 px-3.5">Result / CGPA</th>
+        <th class="py-3 px-3.5">Skill Domain</th>
+        <th class="py-3 px-3.5">Core Technologies & Tools</th>
+        <th class="py-3 px-3.5">Competency Level</th>
+        <th class="py-3 px-3.5">Academic & Practical Application</th>
       </tr>
     </thead>
     <tbody class="divide-y divide-zinc-800/60 text-zinc-300 font-sans">
       <tr class="hover:bg-blue-500/5 transition-colors">
-        <td class="py-3.5 px-3.5 font-semibold text-white">B.Sc. in Computer Science and Engineering</td>
-        <td class="py-3.5 px-3.5">Daffodil International University (DIU), Bangladesh</td>
-        <td class="py-3.5 px-3.5 font-mono text-sky-300">Software Development & QA</td>
-        <td class="py-3.5 px-3.5 font-mono">Enrolled (Final Semester)</td>
-        <td class="py-3.5 px-3.5 font-mono text-emerald-400 font-bold">CGPA: 3.63 / 4.00</td>
+        <td class="py-3.5 px-3.5 font-semibold text-white">Software QA & Testing</td>
+        <td class="py-3.5 px-3.5 font-mono text-sky-300">Manual Testing, Test Case Design, RTM, Jira, Defect Life Cycle</td>
+        <td class="py-3.5 px-3.5 font-mono text-emerald-400 font-bold">Advanced</td>
+        <td class="py-3.5 px-3.5">SkyBound Airways SQA Suite, BVA & Equivalence Partitioning</td>
       </tr>
     </tbody>
   </table>
 </div>
 ```
-- **What it does:** Renders a clean, tabular representation of academic qualifications with headers, border dividers, and subtle hover highlights on each row.
-- **Why it was used:** Tables are the semantic standard for structured tabular data. Wrapping the table inside an `overflow-x-auto` container guarantees horizontal scrollability on smaller mobile screens without clipping or breaking the surrounding layout.
+- **What it does:** Renders a clean, tabular representation of technical competencies across Software QA, Programming, Web Development, and Databases with headers, border dividers, and subtle hover highlights on each row.
+- **Why it was used:** Tables are the semantic standard for structured tabular comparisons. Wrapping the table inside an `overflow-x-auto` container guarantees horizontal scrollability on smaller mobile screens without clipping or breaking the surrounding layout, perfectly satisfying the requirement: *"Include at least one table (for example skills, education or project list)"*. In addition, `about.html` presents the official Daffodil International University academic qualifications table, and `projects.html` provides the comparative project evaluation matrix table.
 
 ---
 
