@@ -74,8 +74,16 @@
         <a href="contact.html" class="nav-item active px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-semibold shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-all">Contact</a>
       </div>
 
-      <!-- Right: Controls -->
+      <!-- Right: Controls (Theme & Live Clock) -->
       <div class="flex items-center gap-3 shrink-0">
+        <!-- Live Time Display -->
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-700/60 text-zinc-300 font-mono text-xs shadow-inner">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="nav-live-time" class="tracking-wider text-sky-300 font-semibold">--:--:--</span>
+          <span class="text-[10px] text-zinc-500 uppercase font-sans hidden md:inline">Dhaka</span>
+        </div>
+
+        <!-- Sun / Moon Theme Icons -->
         <div class="flex items-center gap-1.5 text-zinc-400">
           <button id="theme-toggle-sun" aria-label="Sun icon" class="w-6 h-6 flex items-center justify-center hover:text-white transition-colors">
             <i data-lucide="sun" class="w-4 h-4"></i>
@@ -84,14 +92,6 @@
             <i data-lucide="moon" class="w-4 h-4"></i>
           </button>
         </div>
-        <span class="w-[1px] h-4 bg-zinc-700/60 hidden sm:block"></span>
-        <button id="sound-toggle" aria-label="Toggle sound feedback" class="hidden sm:flex w-7 h-7 rounded-full bg-zinc-800/40 hover:bg-zinc-700/60 items-center justify-center text-zinc-400 hover:text-white transition-all">
-          <i data-lucide="volume-2" class="w-3.5 h-3.5" id="sound-icon"></i>
-        </button>
-        <a href="contact.html" class="px-4 sm:px-5 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white text-xs sm:text-sm font-semibold shadow-[0_0_25px_rgba(59,130,246,0.5)] active:scale-95 transition-all flex items-center gap-1.5">
-          <i data-lucide="send" class="w-3.5 h-3.5"></i>
-          <span>Hire Me</span>
-        </a>
       </div>
 
     </nav>

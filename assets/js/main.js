@@ -710,4 +710,40 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 750);
     });
   }
+
+  /* --------------------------------------------------------------------------
+     8. LIVE CLOCK DISPLAY (Dhaka Time / BST UTC+6)
+     -------------------------------------------------------------------------- */
+  function updateLiveTime() {
+    const now = new Date();
+    const fullOptions = {
+      timeZone: 'Asia/Dhaka',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+    try {
+      const timeFormatter = new Intl.DateTimeFormat('en-US', fullOptions);
+      const timeStr = timeFormatter.format(now);
+
+      const navClock = document.getElementById('nav-live-time');
+      if (navClock) navClock.textContent = timeStr;
+
+      const heroClock = document.getElementById('hero-live-clock');
+      if (heroClock) heroClock.textContent = timeStr;
+
+      const heroQuickTime = document.getElementById('hero-quick-time');
+      if (heroQuickTime) {
+        const shortOptions = { timeZone: 'Asia/Dhaka', hour: '2-digit', minute: '2-digit', hour12: true };
+        heroQuickTime.textContent = new Intl.DateTimeFormat('en-US', shortOptions).format(now);
+      }
+    } catch (err) {
+      const fallbackStr = now.toLocaleTimeString('en-US', { hour12: true });
+      const navClock = document.getElementById('nav-live-time');
+      if (navClock) navClock.textContent = fallbackStr;
+    }
+  }
+  updateLiveTime();
+  setInterval(updateLiveTime, 1000);
 });

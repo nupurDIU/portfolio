@@ -58,7 +58,7 @@ The website uses a **fully linked multi-page architecture** connected by a persi
 
 ```text
 +-----------------------------------------------------------------------------------+
-|  [AVATAR]       [ Home | About | Projects | Contact | #Skills | #Edu ]  [🌙] [Hire Me]  | <- Sticky Navbar
+|  [AVATAR]       [ Home | About | Projects | Contact | #Skills | #Edu ]  [🕒 Live Time] [🌙]  | <- Sticky Navbar
 +-----------------------------------------------------------------------------------+
 |                                                                                   |
 |  [BADGE: Available for QA Roles]                                                  |
