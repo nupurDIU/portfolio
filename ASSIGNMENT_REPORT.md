@@ -71,9 +71,8 @@ The website uses a **fully linked multi-page architecture** connected by a persi
 |  - Bio Paragraphs & Core Testing Mindset                                          |
 |  - Step-by-Step QA Lifecycle Process (<ol> Ordered List)                          |
 +-----------------------------------------------------------------------------------+
-|  SECTION: Technical Skills & Toolset (Grid Cards)                                 |
-|  - Programming | Web Dev | Software QA | Tools | Professional | Languages         |
-|  - [Technical Skills & Competency Matrix Table (<table> with Levels & Tools)]     |
+|  SECTION: Technical Skills & Toolset (6 Categorized Domain Cards)                  |
+|  - Programming | Web Dev | Software QA | Tools | Professional | Office & Languages |
 +-----------------------------------------------------------------------------------+
 |  SECTION: Featured Engineering & QA Projects                                      |
 |  +-----------------------------------------------------------------------------+  |
@@ -137,37 +136,39 @@ The website uses a **fully linked multi-page architecture** connected by a persi
 | **Images (`<img>`)** | All Pages | High-resolution project screenshots (`skybound-main.png`, `lexical-analyzer-main.png`), thumbnails, and profile portrait. |
 | **Internal Links (`<a>`)** | All Pages | Inter-page navigation (`index.html`, `about.html`, `projects.html`, `contact.html`) and on-page section anchors (`#skills`, `#education`). |
 | **External Links (`<a>`)** | All Pages | `target="_blank"` links to GitHub profile (`github.com/nupurDIU`), LinkedIn, and image view tabs. |
-| **Tables (`<table>`)** | All Pages | Technical Skills & Competency Matrix Table (`index.html`), Academic Qualifications Table (`about.html`), Project Comparison Matrix Table (`projects.html`), and Availability SLA Matrix (`contact.html`). |
+| **Tables (`<table>`)** | Multi-Page Architecture (`about.html`, `projects.html`, `contact.html`) | Academic Qualifications Table (`about.html`), Project Comparison Matrix Table (`projects.html`), and Availability SLA Matrix (`contact.html`). |
 
 ---
 
 ### 3. Explanation of Three Code Snippets
 
-#### Code Snippet 1: Technical Skills & Tools Competency Table (`<table>`)
+#### Code Snippet 1: Responsive Academic Credentials Table (`<table>` on `about.html`)
 ```html
 <div class="overflow-x-auto rounded-2xl border border-blue-500/25 bg-[#0d111f]/90 p-6 shadow-xl space-y-4">
   <table class="w-full text-left font-mono text-xs border-collapse">
     <thead>
       <tr class="border-b border-zinc-800 text-sky-400 text-[11px] uppercase tracking-wider bg-zinc-950/60">
-        <th class="py-3 px-3.5">Skill Domain</th>
-        <th class="py-3 px-3.5">Core Technologies & Tools</th>
-        <th class="py-3 px-3.5">Competency Level</th>
-        <th class="py-3 px-3.5">Academic & Practical Application</th>
+        <th class="py-3 px-3.5">Degree / Examination</th>
+        <th class="py-3 px-3.5">Institution / University</th>
+        <th class="py-3 px-3.5">Major / Group</th>
+        <th class="py-3 px-3.5">Passing Year</th>
+        <th class="py-3 px-3.5">Result / CGPA</th>
       </tr>
     </thead>
     <tbody class="divide-y divide-zinc-800/60 text-zinc-300 font-sans">
       <tr class="hover:bg-blue-500/5 transition-colors">
-        <td class="py-3.5 px-3.5 font-semibold text-white">Software QA & Testing</td>
-        <td class="py-3.5 px-3.5 font-mono text-sky-300">Manual Testing, Test Case Design, RTM, Jira, Defect Life Cycle</td>
-        <td class="py-3.5 px-3.5 font-mono text-emerald-400 font-bold">Advanced</td>
-        <td class="py-3.5 px-3.5">SkyBound Airways SQA Suite, BVA & Equivalence Partitioning</td>
+        <td class="py-3.5 px-3.5 font-semibold text-white">B.Sc. in Computer Science and Engineering</td>
+        <td class="py-3.5 px-3.5">Daffodil International University (DIU), Bangladesh</td>
+        <td class="py-3.5 px-3.5 font-mono text-sky-300">Software Development & QA</td>
+        <td class="py-3.5 px-3.5 font-mono">Enrolled (Final Semester)</td>
+        <td class="py-3.5 px-3.5 font-mono text-emerald-400 font-bold">CGPA: 3.63 / 4.00</td>
       </tr>
     </tbody>
   </table>
 </div>
 ```
-- **What it does:** Renders a clean, tabular representation of technical competencies across Software QA, Programming, Web Development, and Databases with headers, border dividers, and subtle hover highlights on each row.
-- **Why it was used:** Tables are the semantic standard for structured tabular comparisons. Wrapping the table inside an `overflow-x-auto` container guarantees horizontal scrollability on smaller mobile screens without clipping or breaking the surrounding layout, perfectly satisfying the requirement: *"Include at least one table (for example skills, education or project list)"*. In addition, `about.html` presents the official Daffodil International University academic qualifications table, and `projects.html` provides the comparative project evaluation matrix table.
+- **What it does:** Renders a clean, tabular representation of academic qualifications (DIU BSc in CSE, HSC, SSC) with degree details, passing years, and verified CGPA/GPA.
+- **Why it was used:** In professional multi-page architecture, tabular records belong naturally on dedicated analytical pages (such as `about.html` and `projects.html`) to prevent redundant, duplicate content on the executive landing page. Tables are the semantic standard for structured tabular data. Wrapping the table inside an `overflow-x-auto` container guarantees horizontal scrollability on smaller mobile screens without clipping or breaking the surrounding layout, perfectly satisfying the rubric requirement: *"Include at least one table (for example skills, education or project list)"*. In addition, `projects.html` provides the comparative project evaluation matrix table, and `contact.html` provides the communication SLA matrix table.
 
 ---
 
