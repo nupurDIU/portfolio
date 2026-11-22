@@ -398,6 +398,216 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `,
     },
+    'lexical-analyzer': {
+      tag: 'Compiler Engineering • Java Swing & Syntax Analysis',
+      title: 'Lexical Analyzer with Syntax Checker & Symbol Table Architecture',
+      meta: 'Interactive Compiler Front-End • Java Swing Desktop • Tokenizer & Syntax Engine • Symbol Table Management',
+      content: `
+        <div class="space-y-6 text-sm text-zinc-300 leading-relaxed font-sans">
+          
+          <!-- SECTION 1: System Overview & 3-Panel Architecture -->
+          <div class="space-y-3">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400">1. System Overview & 3-Panel GUI Architecture</h4>
+            <p>
+              Engineered a lightweight, educational compiler front-end built in <strong>Java and Swing GUI</strong> designed to demystify compilation phases. Unlike opaque command-line compilers, the system gives immediate visual feedback through a modular <strong>three-panel workspace</strong>:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
+              <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
+                <span class="text-emerald-400 font-bold block">1. Code Input Panel</span>
+                <p class="font-sans text-[11px] text-zinc-400">High-capacity text area allowing developers to write or paste C-like source code for real-time analysis.</p>
+              </div>
+              <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
+                <span class="text-teal-400 font-bold block">2. Token Stream Panel</span>
+                <p class="font-sans text-[11px] text-zinc-400">Line-by-line token decomposition showing categorized tokens with line number mapping.</p>
+              </div>
+              <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
+                <span class="text-sky-400 font-bold block">3. Syntax & Suggestion Panel</span>
+                <p class="font-sans text-[11px] text-zinc-400">Dedicated diagnostics display reporting exact error locations and actionable fix instructions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 2: Lexical Tokenization Engine -->
+          <div class="space-y-3">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400">2. Lexical Tokenization Engine & Classification</h4>
+            <p>
+              The lexical analyzer scans source code line-by-line using regular expressions and string tokenization to isolate lexemes and map them into 6 formal compiler classifications:
+            </p>
+            <div class="overflow-x-auto rounded-xl border border-zinc-800 bg-zinc-950/70 p-3">
+              <table class="w-full text-left font-mono text-xs border-collapse">
+                <thead>
+                  <tr class="border-b border-zinc-800 text-emerald-400">
+                    <th class="py-1.5 px-2">Classification</th>
+                    <th class="py-1.5 px-2">Examples Identified</th>
+                    <th class="py-1.5 px-2">Compiler Role</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-zinc-800/60 text-zinc-300">
+                  <tr>
+                    <td class="py-2 px-2 text-white font-bold">Keywords</td>
+                    <td class="py-2 px-2 text-emerald-300 font-mono">int, float, char, return, void</td>
+                    <td class="py-2 px-2 font-sans text-xs">Reserved language syntax constructs.</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 px-2 text-white font-bold">Identifiers</td>
+                    <td class="py-2 px-2 text-sky-300 font-mono">main, a, b, c</td>
+                    <td class="py-2 px-2 font-sans text-xs">User-defined function names and variables.</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 px-2 text-white font-bold">Numbers / Constants</td>
+                    <td class="py-2 px-2 text-amber-300 font-mono">5, 3.14, 0</td>
+                    <td class="py-2 px-2 font-sans text-xs">Integer and floating-point numeric literals.</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 px-2 text-white font-bold">Operators</td>
+                    <td class="py-2 px-2 text-teal-300 font-mono">=, +, -, *, /</td>
+                    <td class="py-2 px-2 font-sans text-xs">Arithmetic computation and assignment symbols.</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 px-2 text-white font-bold">Delimiters</td>
+                    <td class="py-2 px-2 text-purple-300 font-mono">(, ), {, }, ;, ,</td>
+                    <td class="py-2 px-2 font-sans text-xs">Scope boundaries and statement terminators.</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 px-2 text-white font-bold">Library Functions</td>
+                    <td class="py-2 px-2 text-pink-300 font-mono">printf, scanf</td>
+                    <td class="py-2 px-2 font-sans text-xs">Standard C run-time library calls.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SECTION 3: Syntax Error Detection & Intelligent Suggestions -->
+          <div class="space-y-3">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400">3. Syntax Error Diagnostics & Actionable Suggestion Engine</h4>
+            <p>
+              Traditional compilers output cryptic errors (e.g. GCC error codes) that frustrate novice programmers. This system includes an intelligent suggestion engine with exact line tracking:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 font-mono text-xs">
+              <div class="p-4 rounded-xl border border-amber-500/30 bg-amber-950/15 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-amber-400 font-bold">Missing Semicolon Detection</span>
+                  <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px]">Statement Check</span>
+                </div>
+                <p class="font-sans text-zinc-300 text-xs">Scans statement terminators and identifies omitted semicolons across assignment and declaration lines.</p>
+                <div class="p-2.5 rounded bg-black/50 border border-amber-500/20 text-[11px] text-amber-200">
+                  <code>Line 5: Missing semicolon ';'</code><br>
+                  <span class="text-emerald-400">Suggestion: Add ';' at the end of the statement.</span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl border border-teal-500/30 bg-teal-950/15 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-teal-400 font-bold">Parentheses & Brace Balancing</span>
+                  <span class="px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 text-[10px]">Scope Check</span>
+                </div>
+                <p class="font-sans text-zinc-300 text-xs">Tracks nested scopes and balances opening/closing curly braces and parentheses counters.</p>
+                <div class="p-2.5 rounded bg-black/50 border border-teal-500/20 text-[11px] text-teal-200">
+                  <code>Parentheses mismatch: '{' = 2, '}' = 1</code><br>
+                  <span class="text-emerald-400">Suggestion: Match all parentheses properly.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 4: Symbol Table Management -->
+          <div class="space-y-3">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400">4. Dynamic Symbol Table Management</h4>
+            <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 space-y-2.5 font-mono text-xs">
+              <p class="font-sans text-zinc-300 text-xs leading-relaxed">
+                Mimicking real-world compilation architecture, the application builds a dynamic <strong>Variable Symbol Table</strong> upon analysis, recording identifier names with their resolved data types and auditing standard library invocations:
+              </p>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+                <div class="p-2 rounded bg-zinc-950 border border-zinc-800 text-center">
+                  <span class="text-zinc-500 text-[10px] block">IDENTIFIER</span>
+                  <span class="text-white font-bold">main</span>
+                  <span class="text-emerald-400 text-[10px] block">int</span>
+                </div>
+                <div class="p-2 rounded bg-zinc-950 border border-zinc-800 text-center">
+                  <span class="text-zinc-500 text-[10px] block">IDENTIFIER</span>
+                  <span class="text-white font-bold">a</span>
+                  <span class="text-emerald-400 text-[10px] block">int</span>
+                </div>
+                <div class="p-2 rounded bg-zinc-950 border border-zinc-800 text-center">
+                  <span class="text-zinc-500 text-[10px] block">IDENTIFIER</span>
+                  <span class="text-white font-bold">b</span>
+                  <span class="text-teal-400 text-[10px] block">float</span>
+                </div>
+                <div class="p-2 rounded bg-zinc-950 border border-zinc-800 text-center">
+                  <span class="text-zinc-500 text-[10px] block">IDENTIFIER</span>
+                  <span class="text-white font-bold">c</span>
+                  <span class="text-sky-400 text-[10px] block">char</span>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-zinc-800 flex items-center justify-between text-xs">
+                <span class="text-zinc-400">Library Functions Tracked:</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-800 text-pink-300 font-mono">printf</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 5: Visual Artifacts & Execution Screenshots -->
+          <div class="space-y-3 pt-3 border-t border-zinc-800/80">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400 flex items-center justify-between">
+              <span>Visual Execution Artifacts & System Diagrams</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/30 text-[10px] text-emerald-300">Application Captures</span>
+            </h4>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Screenshots demonstrating clean code compilation, error diagnostics, and system architecture:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+              
+              <!-- Image 1 -->
+              <a href="assets/images/projects/lexical-analyzer/lexical-valid-syntax.png" target="_blank" class="block group/img rounded-xl overflow-hidden border border-zinc-800 hover:border-emerald-500/60 transition-all bg-zinc-950 shadow-md">
+                <div class="aspect-video overflow-hidden">
+                  <img src="assets/images/projects/lexical-analyzer/lexical-valid-syntax.png" alt="Valid Syntax & Symbol Table" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-2.5 bg-zinc-900/90 flex items-center justify-between text-[11px] font-mono text-zinc-300">
+                  <span>Fig 1: Clean Code & Symbol Table Modal</span>
+                  <span class="text-emerald-400 group-hover/img:underline">Zoom ↗</span>
+                </div>
+              </a>
+
+              <!-- Image 2 -->
+              <a href="assets/images/projects/lexical-analyzer/lexical-error-detection.png" target="_blank" class="block group/img rounded-xl overflow-hidden border border-zinc-800 hover:border-amber-500/60 transition-all bg-zinc-950 shadow-md">
+                <div class="aspect-video overflow-hidden">
+                  <img src="assets/images/projects/lexical-analyzer/lexical-error-detection.png" alt="Syntax Error & Suggestions" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-2.5 bg-zinc-900/90 flex items-center justify-between text-[11px] font-mono text-zinc-300">
+                  <span>Fig 2: Error Diagnostics & Suggestions</span>
+                  <span class="text-amber-400 group-hover/img:underline">Zoom ↗</span>
+                </div>
+              </a>
+
+              <!-- Image 3 -->
+              <a href="assets/images/projects/lexical-analyzer/lexical-ui-initial.png" target="_blank" class="block group/img rounded-xl overflow-hidden border border-zinc-800 hover:border-teal-500/60 transition-all bg-zinc-950 shadow-md">
+                <div class="aspect-video overflow-hidden">
+                  <img src="assets/images/projects/lexical-analyzer/lexical-ui-initial.png" alt="Initial 3-Panel GUI" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-2.5 bg-zinc-900/90 flex items-center justify-between text-[11px] font-mono text-zinc-300">
+                  <span>Fig 3: 3-Panel Swing User Interface</span>
+                  <span class="text-teal-400 group-hover/img:underline">Zoom ↗</span>
+                </div>
+              </a>
+
+              <!-- Image 4 -->
+              <a href="assets/images/projects/lexical-analyzer/lexical-architecture-flowchart.png" target="_blank" class="block group/img rounded-xl overflow-hidden border border-zinc-800 hover:border-sky-500/60 transition-all bg-zinc-950 shadow-md">
+                <div class="aspect-video overflow-hidden">
+                  <img src="assets/images/projects/lexical-analyzer/lexical-architecture-flowchart.png" alt="Architecture Flowchart" class="w-full h-full object-contain p-2 group-hover/img:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="p-2.5 bg-zinc-900/90 flex items-center justify-between text-[11px] font-mono text-zinc-300">
+                  <span>Fig 4: System Data Flow Architecture</span>
+                  <span class="text-sky-400 group-hover/img:underline">Zoom ↗</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      `,
+    },
     omnitest: {
       tag: 'E2E Web Automation • Playwright & TypeScript',
       title: 'OmniTest: Headless E2E Regression Architecture & CI Matrix',
