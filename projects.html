@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Case Studies — Nazneen Nahar Nupur | Quality Assurance Engineer</title>
+  <meta name="description" content="Verified SQA and Software Engineering projects: SkyBound Airways and Lexical Analyzer with Syntax Checker.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#080b14',
+              surface: '#0d111f',
+              border: '#1c2336',
+              blue: '#2563eb',
+              cyan: '#06b6d4',
+              sky: '#38bdf8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#080b14] text-zinc-100 font-sans selection:bg-blue-600/30 selection:text-blue-200 antialiased overflow-x-hidden min-h-screen">
+
+  <div class="pointer-events-none fixed -top-24 -left-24 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-blue-700/25 via-indigo-600/15 to-transparent blur-[120px] -z-10"></div>
+  <div class="pointer-events-none fixed -bottom-32 -left-24 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-blue-800/25 via-indigo-900/20 to-transparent blur-[140px] -z-10"></div>
+  <div class="pointer-events-none fixed -bottom-32 -right-24 w-[650px] h-[650px] rounded-full bg-gradient-to-tl from-purple-800/25 via-blue-700/20 to-transparent blur-[140px] -z-10"></div>
+
+  <!-- FLOATING NAVBAR -->
+  <header class="sticky top-5 z-50 w-full px-4 flex justify-center">
+    <nav class="w-full max-w-4xl rounded-full bg-[#0c101d]/85 backdrop-blur-xl border border-white/[0.08] px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-[0_15px_40px_rgba(0,0,0,0.65)]">
+      
+      <!-- Left: Avatar -->
+      <a href="index.html" class="flex items-center gap-2 group shrink-0">
+        <div class="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-blue-500/40 group-hover:ring-blue-400 transition-all">
+          <img src="assets/images/profile.jpg" alt="Nazneen Nahar Nupur" class="w-full h-full object-cover">
+          <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-[#0c101d]" title="Available for hire"></span>
+        </div>
+      </a>
+
+      <!-- Center: Nav links -->
+      <div class="hidden sm:flex items-center gap-1 sm:gap-2 text-xs md:text-sm font-medium text-zinc-300">
+        <a href="index.html" class="nav-item px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/[0.06] transition-all">Home</a>
+        <a href="about.html" class="nav-item px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/[0.06] transition-all">About</a>
+        <a href="projects.html" class="nav-item active px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-semibold shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-all">Projects</a>
+        <a href="contact.html" class="nav-item px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/[0.06] transition-all">Contact</a>
+      </div>
+
+      <!-- Right: Controls -->
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="flex items-center gap-1.5 text-zinc-400">
+          <button id="theme-toggle-sun" aria-label="Sun icon" class="w-6 h-6 flex items-center justify-center hover:text-white transition-colors">
+            <i data-lucide="sun" class="w-4 h-4"></i>
+          </button>
+          <button id="theme-toggle-moon" aria-label="Moon icon" class="w-6 h-6 flex items-center justify-center text-zinc-300 hover:text-white transition-colors">
+            <i data-lucide="moon" class="w-4 h-4"></i>
+          </button>
+        </div>
+        <span class="w-[1px] h-4 bg-zinc-700/60 hidden sm:block"></span>
+        <button id="sound-toggle" aria-label="Toggle sound feedback" class="hidden sm:flex w-7 h-7 rounded-full bg-zinc-800/40 hover:bg-zinc-700/60 items-center justify-center text-zinc-400 hover:text-white transition-all">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5" id="sound-icon"></i>
+        </button>
+        <a href="contact.html" class="px-4 sm:px-5 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white text-xs sm:text-sm font-semibold shadow-[0_0_25px_rgba(59,130,246,0.5)] active:scale-95 transition-all flex items-center gap-1.5">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span>Hire Me</span>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-6xl mx-auto px-6 pt-16 pb-32 space-y-20">
+    
+    <!-- Hero / Intro -->
+    <section class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 font-mono text-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Portfolio Showcase • Verified Engineering Suites</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+        Featured Projects & Case Studies
+      </h1>
+      <p class="text-base text-zinc-300 max-w-3xl leading-relaxed">
+        Explore my end-to-end software quality assurance engineering suites, requirement traceability matrices, test architectures, and compiler front-end implementations with full visual evidence.
+      </p>
+    </section>
+
+    <!-- Comparative Project Matrix Table (Requirement Part-B) -->
+    <section class="overflow-x-auto rounded-2xl border border-blue-500/25 bg-[#0d111f]/90 p-6 sm:p-8 shadow-xl space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-zinc-800">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-sky-400">Technical Comparison</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2 mt-0.5">
+            <i data-lucide="table" class="w-5 h-5 text-sky-400"></i>
+            <span>Project Engineering & Verification Comparison Table</span>
+          </h2>
+        </div>
+        <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 font-mono text-xs font-semibold">
+          2 Verified Projects
+        </span>
+      </div>
+
+      <table class="w-full text-left font-mono text-xs border-collapse">
+        <thead>
+          <tr class="border-b border-zinc-800 text-sky-400 text-[11px] uppercase tracking-wider bg-zinc-950/60">
+            <th class="py-3 px-3.5">Project Title</th>
+            <th class="py-3 px-3.5">Domain</th>
+            <th class="py-3 px-3.5">Core Tech Stack</th>
+            <th class="py-3 px-3.5">Verification Scope</th>
+            <th class="py-3 px-3.5">Key Deliverables</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-zinc-800/60 text-zinc-300 font-sans">
+          <tr class="hover:bg-blue-500/5 transition-colors">
+            <td class="py-3.5 px-3.5 font-bold text-white font-mono">SkyBound Airways</td>
+            <td class="py-3.5 px-3.5 text-sky-300">Aviation Reservation System</td>
+            <td class="py-3.5 px-3.5 font-mono text-zinc-300">Manual QA, RTM, Jira, BVA</td>
+            <td class="py-3.5 px-3.5">100% SRS Coverage, Pos/Neg/BVA Cases, Severity vs Priority Defect Analysis</td>
+            <td class="py-3.5 px-3.5 font-mono text-emerald-400">RTM Matrix, Jira Comments, 3 Screenshots</td>
+          </tr>
+          <tr class="hover:bg-blue-500/5 transition-colors">
+            <td class="py-3.5 px-3.5 font-bold text-white font-mono">Lexical Analyzer</td>
+            <td class="py-3.5 px-3.5 text-teal-300">Compiler Front-End Engineering</td>
+            <td class="py-3.5 px-3.5 font-mono text-zinc-300">Java, Java Swing, Regex, Parser</td>
+            <td class="py-3.5 px-3.5">6-Category Tokenizer, Semicolon Validation, Parentheses Balancing, Symbol Table</td>
+            <td class="py-3.5 px-3.5 font-mono text-emerald-400">3-Panel GUI, Error Suggestions, 4 Visual Captures</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Project Verification Acceptance Criteria & Milestones (Lists) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-zinc-800/80 font-mono text-xs">
+        <div class="p-4 rounded-xl bg-zinc-950/70 border border-zinc-800 space-y-2">
+          <span class="text-sky-400 font-bold block">Verification Acceptance Criteria (Unordered List):</span>
+          <ul class="list-disc list-inside space-y-1.5 text-zinc-300">
+            <li>100% bidirectional traceability between SRS requirements and test suites.</li>
+            <li>Zero high-severity blockers in production reservation paths.</li>
+            <li>Deterministic regex token recognition across all 6 language classifications.</li>
+            <li>Explicit line-by-line syntax guidance for omitted statement delimiters.</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-xl bg-zinc-950/70 border border-zinc-800 space-y-2">
+          <span class="text-emerald-400 font-bold block">Project Lifecycle Milestones (Ordered List):</span>
+          <ol class="list-decimal list-inside space-y-1.5 text-zinc-300">
+            <li>Requirement decomposition & feasibility study.</li>
+            <li>Architecture prototyping & user interface implementation.</li>
+            <li>Comprehensive test execution (Positive, Negative, Boundary).</li>
+            <li>Defect documentation, triage, and regression sign-off.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Cards Grid -->
+    <section class="grid grid-cols-1 gap-8">
+      
+      <!-- Project 1: SkyBound Airways -->
+      <article class="spotlight-card rounded-2xl border-2 border-blue-500/40 bg-[#0d111f]/90 p-7 sm:p-9 hover:border-blue-400/70 transition-all group overflow-hidden shadow-[0_15px_45px_rgba(37,99,235,0.15)]">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+          
+          <div class="space-y-4 max-w-2xl">
+            <div class="flex flex-wrap items-center gap-2.5">
+              <span class="px-2.5 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-400 font-mono text-[11px] font-bold">Featured SQA Project</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-300 font-mono text-[11px]">Aviation SQA & Testing</span>
+            </div>
+            
+            <h2 class="text-xl sm:text-2xl font-extrabold text-white group-hover:text-sky-300 transition-colors">
+              SkyBound Airways: Requirements Traceability, Test Architecture & Defect Engineering
+            </h2>
+            
+            <p class="text-sm text-zinc-300 leading-relaxed">
+              Formulated complete Software Quality Assurance for the SkyBound flight reservation system. Built Requirements Traceability Matrix (RTM) from formal SRS (REQ-01 to REQ-04), engineered Positive, Negative, and Boundary test cases (TC-01 to TC-03), analyzed real-world Severity vs. Priority defect reports (BUG-001 & BUG-002), and executed defect re-testing and Jira triage linkage.
+            </p>
+            
+            <div class="grid grid-cols-3 gap-3 py-3 border-y border-zinc-800/80 font-mono text-xs">
+              <div>
+                <span class="text-zinc-500 block text-[10px]">TRACEABILITY (RTM)</span>
+                <span class="text-white font-bold text-sm">100% Coverage</span>
+              </div>
+              <div>
+                <span class="text-zinc-500 block text-[10px]">TEST SUITES</span>
+                <span class="text-sky-400 font-bold text-sm">Pos, Neg & BVA</span>
+              </div>
+              <div>
+                <span class="text-zinc-500 block text-[10px]">DEFECT TRIAGE</span>
+                <span class="text-emerald-400 font-bold text-sm">Jira Lifecycle</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2 font-mono text-[11px] text-zinc-300">
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Requirements Engineering (RTM)</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Manual Testing</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Test Case Design</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Boundary Value Analysis</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Defect Engineering</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Jira Defect Triage</span>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <button class="open-case-study-btn px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(59,130,246,0.5)] active:scale-95 transition-all" data-case="skybound">
+                <span>View Full Case Breakdown</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="assets/images/projects/skybound-main.png" target="_blank" class="px-5 py-2.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-700 font-medium text-xs flex items-center justify-center gap-2 transition-all">
+                <i data-lucide="image" class="w-3.5 h-3.5 text-sky-400"></i>
+                <span>Full Screen Picture</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Visual: Project Screenshot Picture -->
+          <div class="w-full lg:w-96 shrink-0 space-y-3">
+            <a href="assets/images/projects/skybound-main.png" target="_blank" class="block relative rounded-xl overflow-hidden border border-sky-500/30 group/img shadow-[0_10px_30px_rgba(0,0,0,0.6)] aspect-video bg-zinc-950">
+              <img src="assets/images/projects/skybound-main.png" alt="SkyBound Airways Test Evidence" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-75 group-hover/img:opacity-40 transition-opacity"></div>
+              <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-xs font-mono text-zinc-300">
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400"></i> Test & Defect Evidence</span>
+                <span class="text-[10px] text-sky-400 bg-black/60 px-2 py-0.5 rounded border border-sky-400/30">Click to View ↗</span>
+              </div>
+            </a>
+            <div class="grid grid-cols-2 gap-2">
+              <a href="assets/images/projects/skybound-evidence-2.png" target="_blank" class="relative rounded-lg overflow-hidden border border-zinc-800 hover:border-blue-500/50 aspect-[16/10] bg-zinc-950 block group/sub">
+                <img src="assets/images/projects/skybound-evidence-2.png" alt="Evidence 2" class="w-full h-full object-cover object-top">
+                <span class="absolute bottom-1 left-1.5 text-[9px] font-mono text-zinc-300 bg-black/70 px-1.5 py-0.5 rounded">Evidence 2</span>
+              </a>
+              <a href="assets/images/projects/skybound-evidence-3.png" target="_blank" class="relative rounded-lg overflow-hidden border border-zinc-800 hover:border-sky-500/50 aspect-[16/10] bg-zinc-950 block group/sub">
+                <img src="assets/images/projects/skybound-evidence-3.png" alt="Evidence 3" class="w-full h-full object-cover object-top">
+                <span class="absolute bottom-1 left-1.5 text-[9px] font-mono text-zinc-300 bg-black/70 px-1.5 py-0.5 rounded">Evidence 3</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- Project 2: Lexical Analyzer with Syntax Checker -->
+      <article class="spotlight-card rounded-2xl border-2 border-emerald-500/40 bg-[#0d131a]/90 p-7 sm:p-9 hover:border-emerald-400/70 transition-all group overflow-hidden shadow-[0_15px_45px_rgba(16,185,129,0.12)]">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+          
+          <div class="space-y-4 max-w-2xl">
+            <div class="flex flex-wrap items-center gap-2.5">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-mono text-[11px] font-bold">Featured Desktop Project</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 font-mono text-[11px]">Compiler Engineering & Java Swing</span>
+            </div>
+            
+            <h2 class="text-xl sm:text-2xl font-extrabold text-white group-hover:text-emerald-300 transition-colors">
+              Lexical Analyzer with Syntax Checker & Symbol Table Architecture
+            </h2>
+            
+            <p class="text-sm text-zinc-300 leading-relaxed">
+              Engineered an interactive compiler front-end and debugging desktop environment in Java Swing. Scans C-like code line-by-line with regex-driven tokenization across 6 core classifications (Keywords, Identifiers, Numbers, Operators, Delimiters, Library Functions), validates syntax anomalies (missing semicolons, brace/parentheses imbalances) with actionable correction guidance, and builds dynamic symbol tables tracking variable identifiers and data types.
+            </p>
+            
+            <div class="grid grid-cols-3 gap-3 py-3 border-y border-zinc-800/80 font-mono text-xs">
+              <div>
+                <span class="text-zinc-500 block text-[10px]">TOKEN CATEGORIES</span>
+                <span class="text-white font-bold text-sm">6 Classifications</span>
+              </div>
+              <div>
+                <span class="text-zinc-500 block text-[10px]">SYNTAX VALIDATION</span>
+                <span class="text-emerald-400 font-bold text-sm">Real-Time Guidance</span>
+              </div>
+              <div>
+                <span class="text-zinc-500 block text-[10px]">ARCHITECTURE</span>
+                <span class="text-teal-400 font-bold text-sm">3-Panel Swing GUI</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2 font-mono text-[11px] text-zinc-300">
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Java</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Java Swing (GUI)</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Compiler Design</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Lexical Analysis</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Syntax Checking</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Symbol Table Management</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Regex Tokenizer</span>
+              <span class="px-2.5 py-1 rounded-full bg-zinc-800/60 border border-zinc-700/50">Error Diagnostics</span>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <button class="open-case-study-btn px-6 py-2.5 rounded-full bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.4)] active:scale-95 transition-all" data-case="lexical-analyzer">
+                <span>View Full Case Breakdown</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="assets/images/projects/lexical-analyzer/lexical-analyzer-main.png" target="_blank" class="px-5 py-2.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-700 font-medium text-xs flex items-center justify-center gap-2 transition-all">
+                <i data-lucide="image" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span>Full Screen Picture</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Visual: Project Screenshot Picture -->
+          <div class="w-full lg:w-96 shrink-0 space-y-3">
+            <a href="assets/images/projects/lexical-analyzer/lexical-analyzer-main.png" target="_blank" class="block relative rounded-xl overflow-hidden border border-emerald-500/30 group/img shadow-[0_10px_30px_rgba(0,0,0,0.6)] aspect-video bg-zinc-950">
+              <img src="assets/images/projects/lexical-analyzer/lexical-analyzer-main.png" alt="Lexical Analyzer with Syntax Checker UI" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-75 group-hover/img:opacity-40 transition-opacity"></div>
+              <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-xs font-mono text-zinc-300">
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400"></i> Syntax & Symbol Table View</span>
+                <span class="text-[10px] text-emerald-400 bg-black/60 px-2 py-0.5 rounded border border-emerald-400/30">Click to View ↗</span>
+              </div>
+            </a>
+            <div class="grid grid-cols-2 gap-2">
+              <a href="assets/images/projects/lexical-analyzer/lexical-error-detection.png" target="_blank" class="relative rounded-lg overflow-hidden border border-zinc-800 hover:border-emerald-500/50 aspect-[16/10] bg-zinc-950 block group/sub">
+                <img src="assets/images/projects/lexical-analyzer/lexical-error-detection.png" alt="Error Detection View" class="w-full h-full object-cover object-top">
+                <span class="absolute bottom-1 left-1.5 text-[9px] font-mono text-zinc-300 bg-black/70 px-1.5 py-0.5 rounded">Error Diagnostics</span>
+              </a>
+              <a href="assets/images/projects/lexical-analyzer/lexical-ui-initial.png" target="_blank" class="relative rounded-lg overflow-hidden border border-zinc-800 hover:border-teal-500/50 aspect-[16/10] bg-zinc-950 block group/sub">
+                <img src="assets/images/projects/lexical-analyzer/lexical-ui-initial.png" alt="3-Panel GUI Interface" class="w-full h-full object-cover object-top">
+                <span class="absolute bottom-1 left-1.5 text-[9px] font-mono text-zinc-300 bg-black/70 px-1.5 py-0.5 rounded">3-Panel GUI</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- CASE STUDY DRAWER MODAL -->
+  <div id="case-study-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-end">
+    <div class="w-full max-w-2xl h-full bg-[#0a0e1c] border-l border-zinc-800 p-8 sm:p-12 overflow-y-auto space-y-8 animate-slide-left">
+      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+        <span class="font-mono text-xs text-sky-400 uppercase tracking-widest" id="drawer-tag">Case Breakdown</span>
+        <button id="close-drawer-btn" class="w-8 h-8 rounded-full bg-zinc-800/80 border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white transition-colors">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div id="drawer-content" class="space-y-6"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-zinc-800/80 py-8 text-center font-mono text-xs text-zinc-500">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 NAZNEEN NAHAR NUPUR • Dhaka, Bangladesh • 01405114666</div>
+      <div class="flex items-center gap-4 text-zinc-400">
+        <a href="mailto:nupur23105101072@diu.edu.bd" class="hover:text-sky-400 transition-colors">nupur23105101072@diu.edu.bd</a>
+        <span>•</span>
+        <a href="https://bit.ly/3TplxHd" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+        <span>•</span>
+        <a href="#" class="hover:text-white transition-colors">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

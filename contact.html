@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Collaboration — Nazneen Nahar Nupur | QA Engineer</title>
+  <meta name="description" content="Get in touch with Nazneen Nahar Nupur for Quality Assurance, automated testing, manual testing, and software engineering opportunities.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#080b14',
+              surface: '#0d111f',
+              border: '#1c2336',
+              blue: '#2563eb',
+              cyan: '#06b6d4',
+              sky: '#38bdf8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- jQuery 3.7.1 for DOM & Ajax -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#080b14] text-zinc-100 font-sans selection:bg-blue-600/30 selection:text-blue-200 antialiased overflow-x-hidden min-h-screen">
+
+  <!-- Fluid Corner Wave Background Elements -->
+  <div class="pointer-events-none fixed -top-24 -left-24 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-blue-700/25 via-indigo-600/15 to-transparent blur-[120px] -z-10"></div>
+  <div class="pointer-events-none fixed -bottom-32 -left-24 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-blue-800/25 via-indigo-900/20 to-transparent blur-[140px] -z-10"></div>
+  <div class="pointer-events-none fixed -bottom-32 -right-24 w-[650px] h-[650px] rounded-full bg-gradient-to-tl from-purple-800/25 via-blue-700/20 to-transparent blur-[140px] -z-10"></div>
+
+  <!-- FLOATING CAPSULE NAVBAR -->
+  <header class="sticky top-5 z-50 w-full px-4 flex justify-center">
+    <nav class="w-full max-w-4xl rounded-full bg-[#0c101d]/85 backdrop-blur-xl border border-white/[0.08] px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-[0_15px_40px_rgba(0,0,0,0.65)]">
+      
+      <!-- Left: Avatar -->
+      <a href="index.html" class="flex items-center gap-2 group shrink-0">
+        <div class="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-blue-500/40 group-hover:ring-blue-400 transition-all">
+          <img src="assets/images/profile.jpg" alt="Nazneen Nahar Nupur" class="w-full h-full object-cover">
+          <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-[#0c101d]" title="Available for hire"></span>
+        </div>
+      </a>
+
+      <!-- Center: Nav links -->
+      <div class="hidden sm:flex items-center gap-1 sm:gap-2 text-xs md:text-sm font-medium text-zinc-300">
+        <a href="index.html" class="nav-item px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/[0.06] transition-all">Home</a>
+        <a href="about.html" class="nav-item px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/[0.06] transition-all">About</a>
+        <a href="projects.html" class="nav-item px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/[0.06] transition-all">Projects</a>
+        <a href="contact.html" class="nav-item active px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-semibold shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-all">Contact</a>
+      </div>
+
+      <!-- Right: Controls -->
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="flex items-center gap-1.5 text-zinc-400">
+          <button id="theme-toggle-sun" aria-label="Sun icon" class="w-6 h-6 flex items-center justify-center hover:text-white transition-colors">
+            <i data-lucide="sun" class="w-4 h-4"></i>
+          </button>
+          <button id="theme-toggle-moon" aria-label="Moon icon" class="w-6 h-6 flex items-center justify-center text-zinc-300 hover:text-white transition-colors">
+            <i data-lucide="moon" class="w-4 h-4"></i>
+          </button>
+        </div>
+        <span class="w-[1px] h-4 bg-zinc-700/60 hidden sm:block"></span>
+        <button id="sound-toggle" aria-label="Toggle sound feedback" class="hidden sm:flex w-7 h-7 rounded-full bg-zinc-800/40 hover:bg-zinc-700/60 items-center justify-center text-zinc-400 hover:text-white transition-all">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5" id="sound-icon"></i>
+        </button>
+        <a href="contact.html" class="px-4 sm:px-5 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white text-xs sm:text-sm font-semibold shadow-[0_0_25px_rgba(59,130,246,0.5)] active:scale-95 transition-all flex items-center gap-1.5">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span>Hire Me</span>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-16">
+
+    <!-- PAGE HEADER -->
+    <section class="text-center space-y-4 pt-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Part-C: Interactive Ajax Form & Response Architecture
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
+        Get In Touch & <span class="bg-gradient-to-r from-blue-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">Collaborate</span>
+      </h1>
+      <p class="text-zinc-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+        Have an upcoming software testing project, QA automation role, or technical inquiry? Reach out via the interactive form below or explore direct contact channels.
+      </p>
+    </section>
+
+    <!-- CONTACT GRID: FORM + CHANNELS -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- LEFT COLUMN: DIRECT CHANNELS & SLA (5 COLS) -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <!-- Profile Summary Card with Image -->
+        <div class="spotlight-card p-6 rounded-2xl border border-zinc-800 bg-[#0d111f]/90 space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="relative w-14 h-14 rounded-2xl overflow-hidden ring-2 ring-blue-500/30">
+              <img src="assets/images/profile.jpg" alt="Nazneen Nahar Nupur" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h2 class="text-base font-bold text-white">Nazneen Nahar Nupur</h2>
+              <p class="text-xs text-sky-400 font-mono">Software Quality Assurance Engineer</p>
+              <p class="text-[11px] text-zinc-400">Daffodil International University (DIU)</p>
+            </div>
+          </div>
+          <p class="text-xs text-zinc-300 leading-relaxed">
+            Specializing in end-to-end web testing, REST API validation, defect lifecycle tracking, and test case design for mission-critical software systems.
+          </p>
+        </div>
+
+        <!-- Unordered List: Direct Channels -->
+        <div class="spotlight-card p-6 rounded-2xl border border-zinc-800 bg-[#0d111f]/90 space-y-4">
+          <div class="flex items-center gap-2">
+            <i data-lucide="radio" class="w-4 h-4 text-sky-400"></i>
+            <h3 class="text-sm font-semibold text-white uppercase tracking-wider font-mono">Direct Communication Channels</h3>
+          </div>
+          <ul class="space-y-3 text-xs text-zinc-300">
+            <li class="flex items-center gap-3 p-2.5 rounded-xl bg-zinc-900/50 border border-zinc-800/80 hover:border-blue-500/30 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 shrink-0">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div class="overflow-hidden">
+                <span class="text-[10px] text-zinc-500 uppercase tracking-wider block font-mono">Official Email</span>
+                <a href="mailto:nupur23105101072@diu.edu.bd" class="text-white hover:text-sky-300 font-medium truncate block transition-colors">
+                  nupur23105101072@diu.edu.bd
+                </a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3 p-2.5 rounded-xl bg-zinc-900/50 border border-zinc-800/80 hover:border-emerald-500/30 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] text-zinc-500 uppercase tracking-wider block font-mono">Direct Mobile</span>
+                <a href="tel:+8801405114666" class="text-white hover:text-emerald-300 font-medium transition-colors">
+                  +880 1405-114666
+                </a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3 p-2.5 rounded-xl bg-zinc-900/50 border border-zinc-800/80 hover:border-sky-500/30 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 shrink-0">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] text-zinc-500 uppercase tracking-wider block font-mono">Professional Network</span>
+                <a href="https://bit.ly/3TplxHd" target="_blank" rel="noopener noreferrer" class="text-white hover:text-sky-300 font-medium transition-colors">
+                  linkedin.com/in/nazneen-nahar-nupur ↗
+                </a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3 p-2.5 rounded-xl bg-zinc-900/50 border border-zinc-800/80 hover:border-purple-500/30 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] text-zinc-500 uppercase tracking-wider block font-mono">Location & Base</span>
+                <span class="text-white font-medium">Dhaka, Bangladesh (UTC+6)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Ordered List: Consultation & SLA Workflow -->
+        <div class="spotlight-card p-6 rounded-2xl border border-zinc-800 bg-[#0d111f]/90 space-y-4">
+          <div class="flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-emerald-400"></i>
+            <h3 class="text-sm font-semibold text-white uppercase tracking-wider font-mono">Inquiry Response SLA Workflow</h3>
+          </div>
+          <ol class="space-y-2.5 text-xs text-zinc-300 counter-reset-item list-decimal list-inside leading-relaxed font-sans">
+            <li class="p-2 rounded-lg bg-zinc-950/40 border border-zinc-800/50">
+              <strong class="text-sky-300">Message Intake & Verification:</strong> Ajax submission logged with timestamp and notification trigger.
+            </li>
+            <li class="p-2 rounded-lg bg-zinc-950/40 border border-zinc-800/50">
+              <strong class="text-sky-300">Requirement Assessment:</strong> Technical scope or QA evaluation reviewed within 12–24 hours.
+            </li>
+            <li class="p-2 rounded-lg bg-zinc-950/40 border border-zinc-800/50">
+              <strong class="text-sky-300">Direct Consultation:</strong> Meeting scheduled via Google Meet / Zoom or detailed email response delivered.
+            </li>
+            <li class="p-2 rounded-lg bg-zinc-950/40 border border-zinc-800/50">
+              <strong class="text-sky-300">Execution & Deliverables:</strong> SQA test strategy, test plan, or test execution scheduled.
+            </li>
+          </ol>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: INTERACTIVE AJAX FORM (7 COLS) -->
+      <div class="lg:col-span-7">
+        <div class="spotlight-card p-6 sm:p-8 rounded-3xl border border-zinc-800 bg-[#0d111f]/95 shadow-[0_20px_50px_rgba(0,0,0,0.5)] space-y-6">
+          
+          <div>
+            <span class="text-xs font-mono text-blue-400 uppercase tracking-wider block">Interactive Form</span>
+            <h2 class="text-2xl font-bold text-white">Send a Message</h2>
+            <p class="text-xs text-zinc-400 mt-1">Filled forms are processed via asynchronous jQuery Ajax without page reload.</p>
+          </div>
+
+          <!-- Alert Placeholder -->
+          <div id="contact-alert" class="hidden p-4 rounded-xl text-xs font-mono"></div>
+
+          <form id="contact-form" class="space-y-5">
+            
+            <!-- Row 1: Name and Email -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label for="name" class="block text-xs font-semibold text-zinc-300">
+                  Full Name <span class="text-red-400">*</span>
+                </label>
+                <div class="relative">
+                  <i data-lucide="user" class="w-4 h-4 text-zinc-500 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                  <input type="text" id="name" name="name" required placeholder="Nazneen Nahar"
+                    class="w-full bg-zinc-900/80 border border-zinc-800 rounded-xl pl-10 pr-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="email" class="block text-xs font-semibold text-zinc-300">
+                  Email Address <span class="text-red-400">*</span>
+                </label>
+                <div class="relative">
+                  <i data-lucide="mail" class="w-4 h-4 text-zinc-500 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                  <input type="email" id="email" name="email" required placeholder="nazneen@example.com"
+                    class="w-full bg-zinc-900/80 border border-zinc-800 rounded-xl pl-10 pr-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Radio Buttons (Inquiry Type) -->
+            <div class="space-y-2">
+              <label class="block text-xs font-semibold text-zinc-300">
+                Inquiry Type <span class="text-red-400">*</span>
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                <label class="flex items-center gap-2 p-2.5 rounded-xl bg-zinc-900/60 border border-zinc-800 cursor-pointer hover:border-blue-500/40 transition-all">
+                  <input type="radio" name="inquiry_type" value="job" checked class="text-blue-600 focus:ring-blue-500">
+                  <span class="text-xs text-zinc-300">Job Opportunity</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-xl bg-zinc-900/60 border border-zinc-800 cursor-pointer hover:border-blue-500/40 transition-all">
+                  <input type="radio" name="inquiry_type" value="consulting" class="text-blue-600 focus:ring-blue-500">
+                  <span class="text-xs text-zinc-300">QA Consulting</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-xl bg-zinc-900/60 border border-zinc-800 cursor-pointer hover:border-blue-500/40 transition-all">
+                  <input type="radio" name="inquiry_type" value="academic" class="text-blue-600 focus:ring-blue-500">
+                  <span class="text-xs text-zinc-300">Academic / Other</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Row 3: Dropdown Select -->
+            <div class="space-y-1.5">
+              <label for="service" class="block text-xs font-semibold text-zinc-300">
+                Service Domain Required <span class="text-red-400">*</span>
+              </label>
+              <select id="service" name="service" required
+                class="w-full bg-zinc-900/80 border border-zinc-800 rounded-xl px-3.5 py-2.5 text-xs text-zinc-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+                <option value="">-- Please Select Service Area --</option>
+                <option value="manual_testing">Manual Testing & Test Case Design (STLC)</option>
+                <option value="automation">Test Automation (Selenium / Cypress / Playwright)</option>
+                <option value="api_testing">API Testing & Validation (Postman / REST)</option>
+                <option value="performance">Performance & Load Testing (JMeter)</option>
+                <option value="general">General Software Quality Assurance Consultation</option>
+              </select>
+            </div>
+
+            <!-- Row 4: Subject -->
+            <div class="space-y-1.5">
+              <label for="subject" class="block text-xs font-semibold text-zinc-300">
+                Subject Line <span class="text-red-400">*</span>
+              </label>
+              <input type="text" id="subject" name="subject" required placeholder="QA Role Opportunity / Test Automation Inquiry"
+                class="w-full bg-zinc-900/80 border border-zinc-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+            </div>
+
+            <!-- Row 5: Textarea -->
+            <div class="space-y-1.5">
+              <label for="message" class="block text-xs font-semibold text-zinc-300">
+                Detailed Message <span class="text-red-400">*</span>
+              </label>
+              <textarea id="message" name="message" rows="4" required placeholder="Describe your project requirements, testing scope, tech stack, or inquiry details..."
+                class="w-full bg-zinc-900/80 border border-zinc-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"></textarea>
+            </div>
+
+            <!-- Row 6: Checkbox -->
+            <div class="space-y-2">
+              <label class="flex items-center gap-2.5 cursor-pointer">
+                <input type="checkbox" id="copy" name="copy" class="rounded border-zinc-700 text-blue-600 focus:ring-blue-500">
+                <span class="text-xs text-zinc-400">Send me a copy of this message for my records</span>
+              </label>
+              <label class="flex items-center gap-2.5 cursor-pointer">
+                <input type="checkbox" id="agree" name="agree" required checked class="rounded border-zinc-700 text-blue-600 focus:ring-blue-500">
+                <span class="text-xs text-zinc-400">I consent to the processing of submitted contact details for professional communication.</span>
+              </label>
+            </div>
+
+            <!-- Row 7: Submit Button -->
+            <button type="submit" id="submit-btn"
+              class="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(59,130,246,0.5)] active:scale-[0.99] transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Send Message via Ajax</span>
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TABLE: RESPONSE SLA MATRIX -->
+    <section class="spotlight-card p-6 sm:p-8 rounded-3xl border border-zinc-800 bg-[#0d111f]/90 space-y-4 overflow-x-auto">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs font-mono text-sky-400 uppercase tracking-wider block">Communication SLA</span>
+          <h2 class="text-xl font-bold text-white">Channel Availability & Turnaround Matrix</h2>
+        </div>
+        <div class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+          ● Online & Accepting Opportunities
+        </div>
+      </div>
+
+      <table class="w-full text-left text-xs border-collapse">
+        <thead>
+          <tr class="border-b border-zinc-800 text-sky-400 text-[11px] uppercase tracking-wider bg-zinc-950/60">
+            <th class="py-3 px-3.5">Channel / Method</th>
+            <th class="py-3 px-3.5">Contact Endpoint</th>
+            <th class="py-3 px-3.5">Response SLA</th>
+            <th class="py-3 px-3.5">Best For</th>
+            <th class="py-3 px-3.5">Status</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-zinc-800/60 text-zinc-300 font-sans">
+          <tr class="hover:bg-blue-500/5 transition-colors">
+            <td class="py-3 px-3.5 font-semibold text-white">Ajax Contact Form</td>
+            <td class="py-3 px-3.5 font-mono text-zinc-400">Integrated Webhook Handler</td>
+            <td class="py-3 px-3.5 font-mono text-emerald-400 font-bold">&lt; 12 Hours</td>
+            <td class="py-3 px-3.5">Project proposals & technical inquiries</td>
+            <td class="py-3 px-3.5"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Operational</span></td>
+          </tr>
+          <tr class="hover:bg-blue-500/5 transition-colors">
+            <td class="py-3 px-3.5 font-semibold text-white">Direct Academic Email</td>
+            <td class="py-3 px-3.5 font-mono text-sky-300">nupur23105101072@diu.edu.bd</td>
+            <td class="py-3 px-3.5 font-mono text-emerald-400 font-bold">&lt; 24 Hours</td>
+            <td class="py-3 px-3.5">Formal academic & university communication</td>
+            <td class="py-3 px-3.5"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Active</span></td>
+          </tr>
+          <tr class="hover:bg-blue-500/5 transition-colors">
+            <td class="py-3 px-3.5 font-semibold text-white">LinkedIn Direct Message</td>
+            <td class="py-3 px-3.5 font-mono text-sky-300">linkedin.com/in/nazneen-nahar-nupur</td>
+            <td class="py-3 px-3.5 font-mono text-emerald-400 font-bold">&lt; 8 Hours</td>
+            <td class="py-3 px-3.5">Recruiting, full-time offers, networking</td>
+            <td class="py-3 px-3.5"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Active</span></td>
+          </tr>
+          <tr class="hover:bg-blue-500/5 transition-colors">
+            <td class="py-3 px-3.5 font-semibold text-white">Phone / WhatsApp</td>
+            <td class="py-3 px-3.5 font-mono text-zinc-300">+880 1405-114666</td>
+            <td class="py-3 px-3.5 font-mono text-emerald-400 font-bold">Immediate (Business Hours)</td>
+            <td class="py-3 px-3.5">Urgent QA consultations & project alignments</td>
+            <td class="py-3 px-3.5"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Available</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Navigation Prompt Cards -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
+      <a href="about.html" class="spotlight-card p-6 rounded-2xl border border-zinc-800 bg-[#0d111f]/90 hover:border-blue-500/50 transition-all flex items-center justify-between group">
+        <div>
+          <span class="text-xs font-mono text-sky-400 uppercase tracking-wider block">Background</span>
+          <span class="text-lg font-bold text-white group-hover:text-sky-300 transition-colors">← Read About Biography</span>
+        </div>
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+          <i data-lucide="user-check" class="w-5 h-5"></i>
+        </div>
+      </a>
+
+      <a href="projects.html" class="spotlight-card p-6 rounded-2xl border border-zinc-800 bg-[#0d111f]/90 hover:border-indigo-500/50 transition-all flex items-center justify-between group">
+        <div>
+          <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider block">Case Studies</span>
+          <span class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">Review Projects Matrix →</span>
+        </div>
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+          <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+        </div>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-zinc-800/80 py-8 text-center font-mono text-xs text-zinc-500">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 NAZNEEN NAHAR NUPUR • Dhaka, Bangladesh • 01405114666</div>
+      <div class="flex items-center gap-4 text-zinc-400">
+        <a href="mailto:nupur23105101072@diu.edu.bd" class="hover:text-sky-400 transition-colors">nupur23105101072@diu.edu.bd</a>
+        <span>•</span>
+        <a href="https://bit.ly/3TplxHd" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+        <span>•</span>
+        <a href="#" class="hover:text-white transition-colors">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
