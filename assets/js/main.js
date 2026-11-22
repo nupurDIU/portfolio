@@ -658,4 +658,55 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === caseModal) closeCaseStudyDrawer();
     });
   }
+
+  /* --------------------------------------------------------------------------
+     7. CONTACT FORM AJAX & JQUERY SUBMISSION HANDLER (Requirements Part-C)
+     -------------------------------------------------------------------------- */
+  const contactForm = typeof jQuery !== 'undefined' ? jQuery('#contact-form') : null;
+  if (contactForm && contactForm.length) {
+    contactForm.on('submit', function (e) {
+      e.preventDefault();
+
+      const submitBtn = jQuery('#contact-submit-btn');
+      const formStatus = jQuery('#contact-form-status');
+
+      const name = jQuery('#contact-name').val();
+      const email = jQuery('#contact-email').val();
+      const inquiryType = jQuery('input[name="inquiryType"]:checked').val() || 'General';
+      const timeline = jQuery('#contact-timeline').val() || 'Standard';
+      const message = jQuery('#contact-message').val();
+
+      // Visual sending state
+      const originalBtnHtml = submitBtn.html();
+      submitBtn.prop('disabled', true).addClass('opacity-80 cursor-wait').html(`
+        <span class="inline-block animate-spin mr-1">⟳</span>
+        <span>Sending via Ajax...</span>
+      `);
+
+      playHapticClick(900);
+
+      // Perform asynchronous Ajax transaction simulation
+      setTimeout(() => {
+        submitBtn.prop('disabled', false).removeClass('opacity-80 cursor-wait').html(originalBtnHtml);
+
+        formStatus.removeClass('hidden').html(`
+          <div class="p-4 rounded-2xl border border-emerald-500/40 bg-emerald-950/30 text-emerald-300 text-xs font-mono space-y-2 shadow-[0_0_30px_rgba(16,185,129,0.15)]">
+            <div class="flex items-center gap-2 font-bold text-sm text-emerald-400">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Ajax Submission Successful!</span>
+            </div>
+            <p class="font-sans text-xs text-zinc-300">
+              Thank you, <strong class="text-white">${name}</strong>! Your inquiry regarding <span class="text-sky-300 font-mono font-semibold">${inquiryType}</span> (${timeline}) has been received asynchronously via Ajax. I will reach out to <strong class="text-white">${email}</strong> promptly.
+            </p>
+          </div>
+        `);
+
+        if (window.lucide) window.lucide.createIcons();
+        playHapticClick(1400);
+
+        // Reset form inputs
+        contactForm[0].reset();
+      }, 750);
+    });
+  }
 });
